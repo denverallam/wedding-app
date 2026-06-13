@@ -11,6 +11,32 @@ export const Hero = () => {
         }
     };
 
+    // Staggered sequence variant configuration tailored for the core names
+    const nameContainerVariant = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.2, // Time delay between each element popping up
+                delayChildren: 0.1,
+            }
+        }
+    };
+
+    const nameItemVariant = {
+        hidden: { opacity: 0, y: 15, scale: 0.96 },
+        visible: { 
+            opacity: 1, 
+            y: 0, 
+            scale: 1,
+            transition: { 
+                type: "spring", 
+                stiffness: 50, 
+                damping: 15 
+            } 
+        }
+    };
+
     return (
         <section 
             className="relative min-h-screen flex flex-col items-center justify-center text-center bg-cover bg-center px-6 md:px-12 py-12 overflow-hidden" 
@@ -23,9 +49,10 @@ export const Hero = () => {
 
             <motion.div 
                 initial="hidden" 
-                animate="visible" 
+                whileInView="visible"
+                viewport={{ once: false, amount: 0.2 }} // Re-triggers animation smoothly on every section entry
                 variants={fadeInVariant} 
-                className="text-stone-800 space-y-6 md:space-y-8 max-w-3xl relative z-20 flex flex-col items-center"
+                className="text-stone-800 space-y-6 md:space-y-8 max-w-4xl relative z-20 flex flex-col items-center"
             >
                 {/* Invitation Sub-header */}
                 <div className="space-y-2">
@@ -35,10 +62,26 @@ export const Hero = () => {
                     <div className="w-6 h-[1px] bg-amber-800/30 mx-auto my-3"></div>
                 </div>
 
-                {/* Main Dynamic Names */}
-                <h1 className="text-4xl sm:text-6xl md:text-8xl font-light tracking-[0.08em] text-stone-900 uppercase leading-none">
-                    Jerome <span className="text-amber-800 font-serif italic block md:inline md:text-[0.9em] md:lowercase md:tracking-normal md:mx-2">&</span> Riva
-                </h1>
+                {/* Main Dynamic Names Container with Pop-up Sequencing */}
+                <motion.h1 
+                    variants={nameContainerVariant}
+                    className="text-4xl sm:text-6xl lg:text-7xl xl:text-8xl font-light tracking-[0.08em] text-stone-900 uppercase leading-tight lg:whitespace-nowrap flex flex-col sm:flex-row items-center justify-center"
+                >
+                    <motion.span variants={nameItemVariant} className="inline-block">
+                        Jerome
+                    </motion.span>
+                    
+                    <motion.span 
+                        variants={nameItemVariant} 
+                        className="text-amber-800 font-serif italic block sm:inline sm:text-[0.9em] sm:lowercase sm:tracking-normal sm:mx-2 lg:mx-4 my-1 sm:my-0"
+                    >
+                        &
+                    </motion.span>
+                    
+                    <motion.span variants={nameItemVariant} className="inline-block">
+                        Riva
+                    </motion.span>
+                </motion.h1>
                 
                 {/* Minimalist Message Text */}
                 <p className="text-[10px] md:text-xs font-sans font-medium tracking-[0.3em] text-stone-400 uppercase max-w-sm mx-auto leading-relaxed">
