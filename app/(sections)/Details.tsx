@@ -30,7 +30,10 @@ export const Details = () => {
                                 <div className="text-stone-900 font-semibold tracking-widest text-sm">3:30 PM — 4:30 PM</div>
                                 <div className="text-[10px] md:text-xs text-stone-400 font-normal normal-case italic max-w-xs mx-auto leading-relaxed pt-1">
                                     Ermita de Piedra de San Jacinto <br />
-                                    <span className="text-stone-400/80 not-italic text-[9px] tracking-wider uppercase font-sans font-medium">beside St. Paul University Philippines, Tuguegarao</span>
+                                    <span className="text-stone-400/80 not-italic text-[9px] tracking-wider uppercase font-sans font-medium">
+                                        JP8G+M37, 1 Legazpi St, Tuguegarao City, 3500 Cagayan <br />
+                                        beside St. Paul University Philippines
+                                    </span>
                                 </div>
                             </div>
                             
@@ -53,7 +56,10 @@ export const Details = () => {
                                 <div className="text-stone-900 font-semibold tracking-widest text-sm">6:00 PM — 11:00 PM</div>
                                 <div className="text-[10px] md:text-xs text-stone-400 font-normal normal-case italic max-w-xs mx-auto leading-relaxed pt-1">
                                     Patio Enrico <br />
-                                    <span className="text-stone-400/80 not-italic text-[9px] tracking-wider uppercase font-sans font-medium">Caggay</span>
+                                    <span className="text-stone-400/80 not-italic text-[9px] tracking-wider uppercase font-sans font-medium">
+                                        JQP2+FMR, Tuguegarao City, Cagayan <br />
+                                        Caggay
+                                    </span>
                                 </div>
                             </div>
 
