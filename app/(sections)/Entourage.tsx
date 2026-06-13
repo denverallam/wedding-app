@@ -6,7 +6,7 @@ import { ReactNode } from "react";
 
 const PrimaryText = ({ children }: { children: ReactNode }) => {
     return (
-        <h3 className="text-center text-[12px] md:text-xs font-bold tracking-[0.25em] uppercase text-amber-900 font-sans">
+        <h3 className="text-center text-[13px] md:text-sm font-semibold tracking-[0.15em] uppercase text-amber-900 font-sans">
             {children}
         </h3>
     );
@@ -14,7 +14,7 @@ const PrimaryText = ({ children }: { children: ReactNode }) => {
 
 const NameText = ({ children, orientation }: { children: ReactNode, orientation: 'left' | 'right' }) => {
     return (
-        <div className={`text-${orientation} text-[11px] md:text-xs font-normal tracking-[0.18em] uppercase text-stone-900 leading-relaxed`}>
+        <div className={`text-${orientation} text-[12px] md:text-[13px] font-medium tracking-[0.08em] uppercase text-stone-900 leading-normal`}>
             {children}
         </div>
     );
@@ -22,7 +22,7 @@ const NameText = ({ children, orientation }: { children: ReactNode, orientation:
 
 const LabelText = ({ children }: { children: ReactNode }) => {
     return (
-        <p className="font-sans text-[9px] md:text-[10px] uppercase tracking-[0.25em] text-stone-500 font-medium text-center max-w-sm mx-auto leading-relaxed mt-1.5">
+        <p className="font-sans text-[10px] md:text-[11px] uppercase tracking-[0.15em] text-stone-500 font-semibold text-center max-w-sm mx-auto leading-normal mt-1">
             {children}
         </p>
     );
@@ -30,7 +30,7 @@ const LabelText = ({ children }: { children: ReactNode }) => {
 
 const TwoColumnContainer = ({ children }: { children: ReactNode }) => {
     return (
-        <div className="mt-4 grid grid-cols-2 gap-x-8 md:gap-x-16 gap-y-3 text-stone-700 font-sans w-full max-w-2xl mx-auto px-2">
+        <div className="mt-2 grid grid-cols-2 gap-x-8 md:gap-x-16 gap-y-2 text-stone-700 font-sans w-full max-w-2xl mx-auto px-4">
             {children}
         </div>
     );
@@ -39,12 +39,12 @@ const TwoColumnContainer = ({ children }: { children: ReactNode }) => {
 export const Entourage = () => {
     return (
         <section
-            className="relative min-h-screen flex flex-col items-center justify-center bg-cover bg-center px-6 md:px-12 py-24 overflow-hidden"
+            className="relative min-h-screen flex flex-col items-center justify-center bg-cover bg-center px-6 md:px-12 py-12 overflow-hidden"
             style={{
                 backgroundImage: `linear-gradient(to bottom, rgba(255, 255, 255, 0.88), rgba(250, 249, 246, 0.75), rgba(254, 243, 199, 0.2)), url('https://images.unsplash.com/photo-1519225495810-7512c696505a?q=80&w=1200')`
             }}
         >
-            {/* Elegant Editorial Framed Border Inside the Viewport (Matching Hero) */}
+            {/* Elegant Editorial Framed Border Inside the Viewport */}
             <div className="absolute inset-4 md:inset-8 border border-stone-200/60 pointer-events-none z-10" />
 
             <motion.div
@@ -52,25 +52,25 @@ export const Entourage = () => {
                 whileInView="visible"
                 viewport={{ once: true, margin: "-100px" }}
                 variants={fadeInVariant}
-                className="text-stone-800 space-y-16 md:space-y-20 max-w-3xl relative z-20 flex flex-col items-center w-full"
+                className="text-stone-800 space-y-10 md:space-y-12 max-w-3xl relative z-20 flex flex-col items-center w-full"
             >
-                {/* Header (Matching Hero Typography Style) */}
-                <div className="space-y-2 text-center">
-                    <h2 className="text-3xl sm:text-4xl font-light tracking-[0.12em] text-stone-950 uppercase leading-tight">
+                {/* Header */}
+                <div className="space-y-1 text-center">
+                    <h2 className="text-3xl sm:text-4xl font-normal tracking-[0.08em] text-stone-950 uppercase leading-tight">
                         The <span className="text-amber-900 font-serif italic lowercase tracking-normal mx-1">entourage</span>
                     </h2>
-                    <div className="w-6 h-[1px] bg-amber-800/40 mx-auto my-3"></div>
-                    <span className="uppercase tracking-[0.4em] text-[9px] md:text-[10px] text-stone-500 font-sans block font-semibold">
+                    <div className="w-6 h-[1px] bg-amber-800/40 mx-auto my-2"></div>
+                    <span className="uppercase tracking-[0.25em] text-[10px] md:text-[11px] text-stone-600 font-sans block font-bold">
                         Those standing by our side
                     </span>
                 </div>
 
                 {/* Parents of the Couple */}
-                <div className="space-y-4 w-full">
+                <div className="space-y-2 w-full">
                     <PrimaryText>Parents of the Couple</PrimaryText>
                     <TwoColumnContainer>
-                        <strong className="font-sans text-stone-500 block text-[9px] md:text-[10px] uppercase tracking-[0.25em] font-bold text-right w-full">Parents of the Groom</strong>
-                        <strong className="font-sans text-stone-500 block text-[9px] md:text-[10px] uppercase tracking-[0.25em] font-bold text-left w-full">Parents of the Bride</strong>
+                        <strong className="font-sans text-stone-500 block text-[10px] md:text-[11px] uppercase tracking-[0.15em] font-extrabold text-right w-full">Parents of the Groom</strong>
+                        <strong className="font-sans text-stone-500 block text-[10px] md:text-[11px] uppercase tracking-[0.15em] font-extrabold text-left w-full">Parents of the Bride</strong>
                     </TwoColumnContainer>
                     <TwoColumnContainer>
                         <NameText orientation="right">Mr. Roger Dalupang</NameText>
@@ -81,7 +81,7 @@ export const Entourage = () => {
                 </div>
 
                 {/* 1. Principal Sponsors */}
-                <div className="space-y-4 w-full border-t border-stone-200/80 pt-12">
+                <div className="space-y-2 w-full pt-2">
                     <PrimaryText>Principal Sponsors</PrimaryText>
                     <LabelText>To stand as witness as we exchange our vows</LabelText>
                     <TwoColumnContainer>
@@ -101,10 +101,10 @@ export const Entourage = () => {
                 </div>
 
                 {/* 2. Best Man & Maid of Honor */}
-                <div className="space-y-4 w-full border-t border-stone-200/80 pt-12">
+                <div className="space-y-2 w-full pt-2">
                     <TwoColumnContainer>
-                        <strong className="font-sans text-amber-900 block text-[10px] md:text-xs uppercase tracking-[0.25em] font-bold text-right w-full">Best Man</strong>
-                        <strong className="font-sans text-amber-900 block text-[10px] md:text-xs uppercase tracking-[0.25em] font-bold text-left w-full">Maid of Honor</strong>
+                        <strong className="font-sans text-amber-900 block text-[11px] md:text-xs uppercase tracking-[0.15em] font-extrabold text-right w-full">Best Man</strong>
+                        <strong className="font-sans text-amber-900 block text-[11px] md:text-xs uppercase tracking-[0.15em] font-extrabold text-left w-full">Maid of Honor</strong>
                     </TwoColumnContainer>
                     <TwoColumnContainer>
                         <NameText orientation="right">Mr. Mark John Vicente</NameText>
@@ -113,27 +113,27 @@ export const Entourage = () => {
                 </div>
 
                 {/* 3. Secondary Sponsors */}
-                <div className="space-y-8 w-full border-t border-stone-200/80 pt-12">
+                <div className="space-y-2 w-full pt-2">
                     <PrimaryText>Secondary Sponsors</PrimaryText>
-                    <div className="flex flex-col gap-y-12 max-w-2xl mx-auto w-full">
+                    <div className="flex flex-col gap-y-6 max-w-2xl mx-auto w-full">
                         <div className="flex flex-col items-center mx-auto w-full">
-                            <strong className="font-sans text-stone-950 block text-[11px] md:text-xs uppercase tracking-[0.2em] font-bold text-center w-full">Candle</strong>
+                            <strong className="font-sans text-stone-950 block text-[11px] md:text-xs uppercase tracking-[0.15em] font-extrabold text-center w-full">Candle</strong>
                             <LabelText>To light our path</LabelText>
                             <TwoColumnContainer>
                                 <NameText orientation="right">Mr. Seann Santos</NameText>
                                 <NameText orientation="left">Ms. Britanny Starlings</NameText>
                             </TwoColumnContainer>
                         </div>
-                        <div className="flex flex-col items-center mx-auto w-full border-t border-stone-200/60 pt-8">
-                            <strong className="font-sans text-stone-950 block text-[11px] md:text-xs uppercase tracking-[0.2em] font-bold text-center w-full">Cord</strong>
+                        <div className="flex flex-col items-center mx-auto w-full pt-4">
+                            <strong className="font-sans text-stone-950 block text-[11px] md:text-xs uppercase tracking-[0.15em] font-extrabold text-center w-full">Cord</strong>
                             <LabelText>To bind us together</LabelText>
                             <TwoColumnContainer>
                                 <NameText orientation="right">Mr. John Jefferson Sy</NameText>
                                 <NameText orientation="left">Ms. Clarissa dela Cruz</NameText>
                             </TwoColumnContainer>
                         </div>
-                        <div className="flex flex-col items-center mx-auto w-full border-t border-stone-200/60 pt-8">
-                            <strong className="font-sans text-stone-950 block text-[11px] md:text-xs uppercase tracking-[0.2em] font-bold text-center w-full">Veil</strong>
+                        <div className="flex flex-col items-center mx-auto w-full pt-4">
+                            <strong className="font-sans text-stone-950 block text-[11px] md:text-xs uppercase tracking-[0.15em] font-extrabold text-center w-full">Veil</strong>
                             <LabelText>To clothe as one</LabelText>
                             <TwoColumnContainer>
                                 <NameText orientation="right">Mr. Jaymond Senique</NameText>
@@ -144,10 +144,10 @@ export const Entourage = () => {
                 </div>
 
                 {/* 4. Groomsmen & Bridesmaids */}
-                <div className="space-y-4 w-full border-t border-stone-200/80 pt-12">
+                <div className="space-y-2 w-full pt-2">
                     <TwoColumnContainer>
-                        <strong className="font-sans text-amber-900 block text-[10px] md:text-xs uppercase tracking-[0.25em] font-bold text-right w-full">Groomsmen</strong>
-                        <strong className="font-sans text-amber-900 block text-[10px] md:text-xs uppercase tracking-[0.25em] font-bold text-left w-full">Bridesmaids</strong>
+                        <strong className="font-sans text-amber-900 block text-[11px] md:text-xs uppercase tracking-[0.15em] font-extrabold text-right w-full">Groomsmen</strong>
+                        <strong className="font-sans text-amber-900 block text-[11px] md:text-xs uppercase tracking-[0.15em] font-extrabold text-left w-full">Bridesmaids</strong>
                     </TwoColumnContainer>
                     <TwoColumnContainer>
                         <NameText orientation="right">Mr. Cenon Ibay Jr.</NameText><NameText orientation="left">Ms. Carla Eloiza Bagunu</NameText>
@@ -165,26 +165,26 @@ export const Entourage = () => {
                 </div>
 
                 {/* 5. Bearers */}
-                <div className="space-y-8 w-full border-t border-stone-200/80 pt-12">
-                    <div className="flex flex-col gap-y-12 max-w-2xl mx-auto w-full">
+                <div className="space-y-2 w-full pt-2">
+                    <div className="flex flex-col gap-y-6 max-w-2xl mx-auto w-full">
                         <div className="flex flex-col items-center mx-auto w-full">
-                            <strong className="font-sans text-stone-950 block text-[11px] md:text-xs uppercase tracking-[0.2em] font-bold text-center w-full">Ring Bearer</strong>
+                            <strong className="font-sans text-stone-950 block text-[11px] md:text-xs uppercase tracking-[0.15em] font-extrabold text-center w-full">Ring Bearer</strong>
                             <LabelText>To carry our symbol of love</LabelText>
                             <TwoColumnContainer>
                                 <NameText orientation="right">Christopher Nicole Verdote</NameText>
                                 <NameText orientation="left">Thia Romainne Basada</NameText>
                             </TwoColumnContainer>
                         </div>
-                        <div className="flex flex-col items-center mx-auto w-full border-t border-stone-200/60 pt-8">
-                            <strong className="font-sans text-stone-950 block text-[11px] md:text-xs uppercase tracking-[0.2em] font-bold text-center w-full">Bible Bearer</strong>
+                        <div className="flex flex-col items-center mx-auto w-full pt-4">
+                            <strong className="font-sans text-stone-950 block text-[11px] md:text-xs uppercase tracking-[0.15em] font-extrabold text-center w-full">Bible Bearer</strong>
                             <LabelText>To carry our symbol of faith</LabelText>
                             <TwoColumnContainer>
                                 <NameText orientation="right">Vincent Fugaban</NameText>
                                 <NameText orientation="left">Ma Kristel Fugaban</NameText>
                             </TwoColumnContainer>
                         </div>
-                        <div className="flex flex-col items-center mx-auto w-full border-t border-stone-200/60 pt-8">
-                            <strong className="font-sans text-stone-950 block text-[11px] md:text-xs uppercase tracking-[0.2em] font-bold text-center w-full">Coin Bearer</strong>
+                        <div className="flex flex-col items-center mx-auto w-full pt-4">
+                            <strong className="font-sans text-stone-950 block text-[11px] md:text-xs uppercase tracking-[0.15em] font-extrabold text-center w-full">Coin Bearer</strong>
                             <LabelText>To carry our symbol of treasures</LabelText>
                             <TwoColumnContainer>
                                 <NameText orientation="right">Manuel Joseph Servando</NameText>
@@ -195,9 +195,9 @@ export const Entourage = () => {
                 </div>
 
                 {/* 6. Flower Girls */}
-                <div className="space-y-4 w-full border-t border-stone-200/80 pt-12">
+                <div className="space-y-2 w-full pt-2">
                     <div className="text-center">
-                        <strong className="font-sans text-amber-900 block text-[11px] md:text-xs uppercase tracking-[0.2em] font-bold w-full">Flower Girls</strong>
+                        <strong className="font-sans text-amber-900 block text-[11px] md:text-xs uppercase tracking-[0.15em] font-extrabold w-full">Flower Girls</strong>
                         <LabelText>To shower our aisle with flowers</LabelText>
                     </div>
                     <TwoColumnContainer>
@@ -209,7 +209,7 @@ export const Entourage = () => {
                 </div>
 
                 {/* Bottom Visual Rule Divider */}
-                <div className="w-full pt-4">
+                <div className="w-full pt-2">
                     <div className="border-b border-stone-200/60 max-w-xs mx-auto w-full" />
                 </div>
             </motion.div>
