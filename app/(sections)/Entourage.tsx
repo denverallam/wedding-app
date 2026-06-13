@@ -74,8 +74,8 @@ export const Entourage = () => {
                     </TwoColumnContainer>
                     <TwoColumnContainer>
                         <NameText orientation="right">Mr. Roger Dalupang</NameText>
-                        <NameText orientation="left">Mrs. Jane Dalupang</NameText>
-                        <NameText orientation="right">Mr. Melanio Allam</NameText>
+                        <NameText orientation="left">Mr. Melanio Allam</NameText>
+                        <NameText orientation="right">Mrs. Jane Dalupang</NameText>
                         <NameText orientation="left">Mrs. Sarah Allam</NameText>
                     </TwoColumnContainer>
                 </div>
