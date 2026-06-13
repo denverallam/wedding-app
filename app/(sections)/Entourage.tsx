@@ -150,17 +150,28 @@ export const Entourage = () => {
                         <strong className="font-sans text-army-900 block text-[11px] md:text-xs uppercase tracking-[0.15em] font-extrabold text-left w-full">Bridesmaids</strong>
                     </TwoColumnContainer>
                     <TwoColumnContainer>
-                        <NameText orientation="right">Mr. Cenon Ibay Jr.</NameText><NameText orientation="left">Ms. Carla Eloiza Bagunu</NameText>
-                        <NameText orientation="right">Mr. Niko Angelo Tabangin</NameText><NameText orientation="left">Ms. Marijoyce Zipagan</NameText>
-                        <NameText orientation="right">Mr. Hardy Batalla</NameText><NameText orientation="left">Ms. Joanna Rose Sapnu</NameText>
-                        <NameText orientation="right">Mr. Dax Paulo Binag</NameText><NameText orientation="left">Ms. Pebie Angelica Binag</NameText>
-                        <NameText orientation="right">Mr. Marc Edgar Mamauag</NameText><NameText orientation="left">Ms. Ma Angelica Ignes</NameText>
-                        <NameText orientation="right">Mr. Jan Paulo Dalupang</NameText><NameText orientation="left">Ms. Harvey Allam</NameText>
-                        <NameText orientation="right">Mr. Denver Allam</NameText><NameText orientation="left">Ms. Raquel Antoinette Dalupang</NameText>
-                        <NameText orientation="right">Mr. Roseven Tumaliuan</NameText><NameText orientation="left">Ms. Josephine Lu Ronquillo</NameText>
-                        <NameText orientation="right">Mr. Paul John Beldad</NameText><NameText orientation="left">Ms. Arbie Christine Beldad</NameText>
-                        <NameText orientation="right">Mr. Japh Razzer Manansala</NameText><NameText orientation="left">Ms. Elgierene Maligaya</NameText>
-                        <NameText orientation="right">Mr. Roque Raunch Bautista</NameText><NameText orientation="left">Ms. Zuzhane Angel Espejo</NameText>
+                                             <NameText orientation="right">Mr. Cenon Ibay Jr.</NameText>
+                        <NameText orientation="left">Ms. Carla Eloiza Bagunu</NameText>
+                        <NameText orientation="right">Mr. Niko Angelo Tabangin</NameText>
+                        <NameText orientation="left">Ms. Marijoyce Zipagan</NameText>
+                        <NameText orientation="right">Mr. Hardy Batalla</NameText>
+                        <NameText orientation="left">Ms. Joanna Rose Sapnu</NameText>
+                        <NameText orientation="right">Mr. Dax Paulo Binag</NameText>
+                        <NameText orientation="left">Ms. Pebie Angelica Binag</NameText>
+                        <NameText orientation="right">Mr. Marc Edgar Mamauag</NameText>
+                        <NameText orientation="left">Ms. Ma Angelica Ignes</NameText>
+                        <NameText orientation="right">Mr. Jan Paulo Dalupang</NameText>
+                        <NameText orientation="left">Ms. Harvey Allam</NameText>
+                        <NameText orientation="right">Mr. Denver Allam</NameText>
+                        <NameText orientation="left">Ms. Angelu Bagunu</NameText>
+                        <NameText orientation="right">Mr. Roseven Tumaliuan</NameText>
+                        <NameText orientation="left">Ms. Josephine Lu Ronquillo</NameText>
+                        <NameText orientation="right">Mr. Paul John Beldad</NameText>
+                        <NameText orientation="left">Ms. Arbie Christine Beldad</NameText>
+                        <NameText orientation="right">Mr. Japh Razzer Manansala</NameText>
+                        <NameText orientation="left">Ms. Elgierene Maligaya</NameText>
+                        <NameText orientation="right">Mr. Roque Raunch Bautista</NameText>
+                        <NameText orientation="left">Ms. Zuzhane Angel Espejo</NameText>
                     </TwoColumnContainer>
                 </div>
 
@@ -201,10 +212,14 @@ export const Entourage = () => {
                         <LabelText>To shower our aisle with flowers</LabelText>
                     </div>
                     <TwoColumnContainer>
-                        <NameText orientation="right">Angelu Bagunu</NameText><NameText orientation="left">Nathalie Mabbayad</NameText>
-                        <NameText orientation="right">Janelle Ashley Dalupang</NameText><NameText orientation="left">Ava Chelsea Ancheta</NameText>
-                        <NameText orientation="right">Pamela Bianca Andres</NameText><NameText orientation="left">Rochel Belesario</NameText>
-                        <NameText orientation="right">Holyanna Acosta</NameText><NameText orientation="left">Coleen Ann Alcantara</NameText>
+                         <NameText orientation="right">Nathalie Mabbayad</NameText>
+                        <NameText orientation="left">Janelle Ashley Dalupang</NameText>
+                        <NameText orientation="right">Ava Chelsea Ancheta</NameText>
+                        <NameText orientation="left">Pamela Bianca Andres</NameText>
+                        <NameText orientation="right">Rochel Belesario</NameText>
+                        <NameText orientation="left">Holyanna Acosta</NameText>
+                        <NameText orientation="right">Coleen Ann Alcantara</NameText>
+                        <NameText orientation="left">Raquel Antoinette Dalupang</NameText>
                     </TwoColumnContainer>
                 </div>
 
