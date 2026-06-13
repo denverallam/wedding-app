@@ -26,7 +26,7 @@ export default function WeddingWebsite() {
       {/* <CurtainPrenup /> */}
       {/* <Location /> */}
       <RSVP />
-      <footer className="py-8 bg-[#333333] text-white/60 text-center font-sans text-xs tracking-wider">
+      <footer className="py-6 px-4 bg-[#333333] text-white/60 text-center font-sans text-xs tracking-wider">
         Thank you for being part of our story. #JEROMEboundtofoRIVA
       </footer>
     </div>
