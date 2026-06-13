@@ -4,16 +4,10 @@ import { motion } from "framer-motion";
 import { fadeInVariant } from "../page";
 
 export const Attire = () => {
-    // Elegant shades of white, cream, and ivory to represent the "All-White" theme beautifully
+    // Elegant shades of pure white requested to represent the strict "All-White" theme beautifully
     const acceptedColors = [
         { name: "Stark White", hex: "bg-white border-stone-300" },
-        { name: "Off-White", hex: "bg-stone-50 border-stone-200" },
-        { name: "Alabaster", hex: "bg-slate-50/90 border-stone-200" },
         { name: "Natural White", hex: "bg-zinc-50 border-stone-200" },
-        { name: "Ivory", hex: "bg-[#FCF9F2] border-stone-200" },
-        { name: "Warm Cream", hex: "bg-[#FAF9F6] border-stone-200" },
-        { name: "Soft Pearl", hex: "bg-[#FDFBF7] border-stone-200" },
-        { name: "Bone", hex: "bg-[#F5F5F0] border-stone-200" },
     ];
 
     return (
@@ -58,25 +52,30 @@ export const Attire = () => {
                     </div>
 
                     {/* Optimized Mobile-Friendly Sample Palette Component */}
-                    <div className="space-y-4 max-w-xl mx-auto pt-2">
+                    <div className="space-y-5 max-w-xl mx-auto pt-2">
                         <span className="uppercase tracking-[0.2em] text-[9px] md:text-[10px] text-stone-400 font-sans block font-semibold">
                             Acceptable Shades Palette
                         </span>
 
-                        {/* Switched to a structured responsive grid to prevent uneven row wraps on mobile layout */}
-                        <div className="grid grid-cols-4 sm:flex sm:flex-wrap items-center justify-center gap-x-2 gap-y-6 sm:gap-4 bg-white/30 backdrop-blur-[2px] p-4 rounded-sm">
+                        {/* Switched to grid-cols-2 for perfect mobile balance since there are only two tones */}
+                        <div className="grid grid-cols-2 sm:flex sm:flex-wrap items-center justify-center gap-x-4 gap-y-6 sm:gap-6 bg-white/30 backdrop-blur-[2px] p-4 rounded-sm max-w-xs mx-auto">
                             {acceptedColors.map((color, idx) => (
                                 <div key={idx} className="flex flex-col items-center space-y-1.5 min-w-0">
                                     <div
                                         className={`w-9 h-9 sm:w-10 sm:h-10 rounded-full border shadow-xs transition-transform hover:scale-105 ${color.hex}`}
                                         title={color.name}
                                     />
-                                    <span className="text-[7px] sm:text-[8px] tracking-wider text-stone-500 uppercase font-sans font-medium truncate w-full max-w-[65px] sm:max-w-none text-center">
+                                    <span className="text-[7px] sm:text-[8px] tracking-wider text-stone-500 uppercase font-sans font-medium truncate w-full max-w-[85px] sm:max-w-none text-center">
                                         {color.name}
                                     </span>
                                 </div>
                             ))}
                         </div>
+
+                        {/* Explicit Notice to Avoid Off-Whites / Ivory / Cream */}
+                        <p className="font-sans text-[9px] md:text-[10px] uppercase tracking-[0.15em] text-amber-900/80 font-medium max-w-md mx-auto leading-relaxed">
+                            * Kindly avoid shades of Ivory, Cream, or Beige. We strictly request pure, clean whites.
+                        </p>
                     </div>
 
                     {/* Balanced Guidelines Breakdown */}

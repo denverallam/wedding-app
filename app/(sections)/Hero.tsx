@@ -21,37 +21,37 @@ export const Hero = () => {
                 delayChildren: 0.1,
             }
         }
-    };
+    } as const; // 👈 Add this right here;
 
     const nameItemVariant = {
         hidden: { opacity: 0, y: 15, scale: 0.96 },
-        visible: { 
-            opacity: 1, 
-            y: 0, 
+        visible: {
+            opacity: 1,
+            y: 0,
             scale: 1,
-            transition: { 
-                type: "spring", 
-                stiffness: 50, 
-                damping: 15 
-            } 
+            transition: {
+                type: "spring",
+                stiffness: 50,
+                damping: 15
+            }
         }
-    };
+    } as const; // 👈 Add this right here;
 
     return (
-        <section 
-            className="relative min-h-screen flex flex-col items-center justify-center text-center bg-cover bg-center px-6 md:px-12 py-12 overflow-hidden" 
-            style={{ 
-                backgroundImage: `linear-gradient(to bottom, rgba(255, 255, 255, 0.82), rgba(250, 249, 246, 0.65), rgba(254, 243, 199, 0.15)), url('https://images.unsplash.com/photo-1519225495810-7512c696505a?q=80&w=1200')` 
+        <section
+            className="relative min-h-screen flex flex-col items-center justify-center text-center bg-cover bg-center px-6 md:px-12 py-12 overflow-hidden"
+            style={{
+                backgroundImage: `linear-gradient(to bottom, rgba(255, 255, 255, 0.82), rgba(250, 249, 246, 0.65), rgba(254, 243, 199, 0.15)), url('https://images.unsplash.com/photo-1519225495810-7512c696505a?q=80&w=1200')`
             }}
         >
             {/* Elegant Editorial Framed Border Inside the Viewport */}
             <div className="absolute inset-4 md:inset-8 border border-stone-200/50 pointer-events-none z-10" />
 
-            <motion.div 
-                initial="hidden" 
+            <motion.div
+                initial="hidden"
                 whileInView="visible"
                 viewport={{ once: false, amount: 0.2 }} // Re-triggers animation smoothly on every section entry
-                variants={fadeInVariant} 
+                variants={fadeInVariant}
                 className="text-stone-800 space-y-6 md:space-y-8 max-w-4xl relative z-20 flex flex-col items-center"
             >
                 {/* Invitation Sub-header */}
@@ -63,26 +63,26 @@ export const Hero = () => {
                 </div>
 
                 {/* Main Dynamic Names Container with Pop-up Sequencing */}
-                <motion.h1 
+                <motion.h1
                     variants={nameContainerVariant}
                     className="text-4xl sm:text-6xl lg:text-7xl xl:text-8xl font-light tracking-[0.08em] text-stone-900 uppercase leading-tight lg:whitespace-nowrap flex flex-col sm:flex-row items-center justify-center"
                 >
                     <motion.span variants={nameItemVariant} className="inline-block">
                         Jerome
                     </motion.span>
-                    
-                    <motion.span 
-                        variants={nameItemVariant} 
+
+                    <motion.span
+                        variants={nameItemVariant}
                         className="text-amber-800 font-serif italic block sm:inline sm:text-[0.9em] sm:lowercase sm:tracking-normal sm:mx-2 lg:mx-4 my-1 sm:my-0"
                     >
                         &
                     </motion.span>
-                    
+
                     <motion.span variants={nameItemVariant} className="inline-block">
                         Riva
                     </motion.span>
                 </motion.h1>
-                
+
                 {/* Minimalist Message Text */}
                 <p className="text-[10px] md:text-xs font-sans font-medium tracking-[0.3em] text-stone-400 uppercase max-w-sm mx-auto leading-relaxed">
                     We invite you to share in our joy as we step into forever
