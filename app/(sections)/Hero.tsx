@@ -59,7 +59,7 @@ export const Hero = () => {
                     <span className="uppercase tracking-[0.4em] text-[10px] md:text-xs text-stone-400 font-sans block font-medium">
                         The Wedding Celebration of
                     </span>
-                    <div className="w-6 h-[1px] bg-amber-800/30 mx-auto my-3"></div>
+                    <div className="w-6 h-[1px] bg-army-800/30 mx-auto my-3"></div>
                 </div>
 
                 {/* Main Dynamic Names Container with Pop-up Sequencing */}
@@ -73,7 +73,7 @@ export const Hero = () => {
 
                     <motion.span
                         variants={nameItemVariant}
-                        className="text-amber-800 font-serif italic block sm:inline sm:text-[0.9em] sm:lowercase sm:tracking-normal sm:mx-2 lg:mx-4 my-1 sm:my-0"
+                        className="text-army-800 font-serif italic block sm:inline sm:text-[0.9em] sm:lowercase sm:tracking-normal sm:mx-2 lg:mx-4 my-1 sm:my-0"
                     >
                         &
                     </motion.span>
@@ -93,7 +93,7 @@ export const Hero = () => {
                     <p className="text-xl md:text-2xl font-light tracking-[0.35em] text-stone-900 border-y border-stone-200/60 py-3 max-w-xs mx-auto pl-[0.35em]">
                         08 28 2026
                     </p>
-                    <p className="text-xs md:text-sm tracking-[0.2em] uppercase text-amber-800 font-sans font-semibold pt-1">
+                    <p className="text-xs md:text-sm tracking-[0.2em] uppercase text-army-800 font-sans font-semibold pt-1">
                         Ermita de San Jacinto
                     </p>
                 </div>

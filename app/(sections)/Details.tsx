@@ -29,9 +29,9 @@ export const Details = () => {
                 {/* Header (Matching Hero Typography Style) */}
                 <div className="space-y-2 text-center">
                     <h2 className="text-3xl sm:text-4xl font-light tracking-[0.1em] text-stone-900 uppercase leading-tight">
-                        The <span className="text-amber-800 font-serif italic lowercase tracking-normal mx-1">details</span>
+                        The <span className="text-army-800 font-serif italic lowercase tracking-normal mx-1">details</span>
                     </h2>
-                    <div className="w-6 h-[1px] bg-amber-800/30 mx-auto my-3"></div>
+                    <div className="w-6 h-[1px] bg-army-800/30 mx-auto my-3"></div>
                     <span className="uppercase tracking-[0.4em] text-[9px] md:text-[10px] text-stone-400 font-sans block font-medium">
                         When and Where
                     </span>
@@ -43,7 +43,7 @@ export const Details = () => {
                     {/* Ceremony Block */}
                     <div className="flex flex-col space-y-5 text-center">
                         <div className="space-y-2">
-                            <h3 className="text-[11px] md:text-xs font-semibold tracking-[0.25em] uppercase text-amber-800 font-sans">
+                            <h3 className="text-[11px] md:text-xs font-semibold tracking-[0.25em] uppercase text-army-800 font-sans">
                                 The Ceremony
                             </h3>
                             <div className="text-stone-900 font-light tracking-[0.15em] text-[11px] md:text-xs uppercase">
@@ -105,7 +105,7 @@ export const Details = () => {
                     {/* Reception Block */}
                     <div className="flex flex-col space-y-4 text-center">
                         <div className="space-y-2">
-                            <h3 className="text-[11px] md:text-xs font-semibold tracking-[0.25em] uppercase text-amber-800 font-sans">
+                            <h3 className="text-[11px] md:text-xs font-semibold tracking-[0.25em] uppercase text-army-800 font-sans">
                                 The Reception
                             </h3>
                             <div className="text-stone-900 font-light tracking-[0.15em] text-[11px] md:text-xs uppercase">

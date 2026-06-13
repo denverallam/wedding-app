@@ -25,9 +25,9 @@ export const RSVP = () => {
                 {/* Section Header */}
                 <div className="space-y-2 text-center">
                     <h2 className="text-3xl sm:text-4xl font-light tracking-[0.12em] text-stone-950 uppercase leading-tight">
-                        Kindly <span className="text-amber-900 font-serif italic lowercase tracking-normal mx-1">reply</span>
+                        Kindly <span className="text-army-900 font-serif italic lowercase tracking-normal mx-1">reply</span>
                     </h2>
-                    <div className="w-6 h-[1px] bg-amber-800/40 mx-auto my-3"></div>
+                    <div className="w-6 h-[1px] bg-army-800/40 mx-auto my-3"></div>
                     <span className="uppercase tracking-[0.35em] text-[9px] md:text-[10px] text-stone-400 font-sans block font-semibold">
                         Please RSVP by August 01, 2026
                     </span>
@@ -44,7 +44,7 @@ export const RSVP = () => {
                             Attendance
                         </label>
                         <div className="relative">
-                            <select className="w-full py-3 px-1 border-b border-stone-200/60 bg-transparent text-xs uppercase tracking-[0.15em] text-stone-700 focus:outline-none focus:border-amber-800 rounded-none transition-colors appearance-none cursor-pointer">
+                            <select className="w-full py-3 px-1 border-b border-stone-200/60 bg-transparent text-xs uppercase tracking-[0.15em] text-stone-700 focus:outline-none focus:border-army-800 rounded-none transition-colors appearance-none cursor-pointer">
                                 <option className="normal-case bg-stone-50">Joyfully Accept</option>
                                 <option className="normal-case bg-stone-50">Regretfully Decline</option>
                             </select>
@@ -63,7 +63,7 @@ export const RSVP = () => {
                         <input 
                             type="number" 
                             min="1" 
-                            className="w-full py-3 px-1 border-b border-stone-200/60 bg-transparent text-xs uppercase tracking-[0.15em] text-stone-700 focus:outline-none focus:border-amber-800 rounded-none transition-colors" 
+                            className="w-full py-3 px-1 border-b border-stone-200/60 bg-transparent text-xs uppercase tracking-[0.15em] text-stone-700 focus:outline-none focus:border-army-800 rounded-none transition-colors" 
                             placeholder="E.G., 1, 2" 
                         />
                     </div>

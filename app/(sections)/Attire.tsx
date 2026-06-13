@@ -30,9 +30,9 @@ export const Attire = () => {
                 {/* Header */}
                 <div className="space-y-2 text-center">
                     <h2 className="text-3xl sm:text-4xl font-light tracking-[0.12em] text-stone-950 uppercase leading-tight">
-                        Wedding <span className="text-amber-900 font-serif italic lowercase tracking-normal mx-1">attire</span>
+                        Wedding <span className="text-army-900 font-serif italic lowercase tracking-normal mx-1">attire</span>
                     </h2>
-                    <div className="w-6 h-[1px] bg-amber-800/40 mx-auto my-3"></div>
+                    <div className="w-6 h-[1px] bg-army-800/40 mx-auto my-3"></div>
                     <span className="uppercase tracking-[0.4em] text-[9px] md:text-[10px] text-stone-500 font-sans block font-semibold">
                         What to wear on our special day
                     </span>
@@ -42,7 +42,7 @@ export const Attire = () => {
                 <div className="space-y-12 text-center w-full max-w-2xl mx-auto">
 
                     {/* Core Requirement Badge */}
-                    <div className="border border-amber-800/30 bg-white/20 px-6 py-6 max-w-xl mx-auto backdrop-blur-[1px] space-y-3">
+                    <div className="border border-army-800/30 bg-white/20 px-6 py-6 max-w-xl mx-auto backdrop-blur-[1px] space-y-3">
                         <p className="text-lg md:text-xl font-normal tracking-[0.25em] text-stone-900 uppercase">
                             ALL-WHITE FORMAL dress code
                         </p>
@@ -73,7 +73,7 @@ export const Attire = () => {
                         </div>
 
                         {/* Explicit Notice to Avoid Off-Whites / Ivory / Cream */}
-                        <p className="font-sans text-[9px] md:text-[10px] uppercase tracking-[0.15em] text-amber-900/80 font-medium max-w-md mx-auto leading-relaxed">
+                        <p className="font-sans text-[9px] md:text-[10px] uppercase tracking-[0.15em] text-army-900/80 font-medium max-w-md mx-auto leading-relaxed">
                             * Kindly avoid shades of Ivory, Cream, or Beige. We strictly request pure, clean whites.
                         </p>
                     </div>
@@ -83,7 +83,7 @@ export const Attire = () => {
 
                         {/* Gentlemen Guideline */}
                         <div className="space-y-2 text-center md:text-right border-b md:border-b-0 md:border-r border-stone-200/60 pb-8 md:pb-0 md:pr-12">
-                            <strong className="font-sans text-amber-900 block font-bold tracking-[0.2em]">
+                            <strong className="font-sans text-army-900 block font-bold tracking-[0.2em]">
                                 Gentlemen:
                             </strong>
                             <p className="text-stone-600 font-light uppercase">
@@ -93,7 +93,7 @@ export const Attire = () => {
 
                         {/* Ladies Guideline */}
                         <div className="space-y-2 text-center md:text-left">
-                            <strong className="font-sans text-amber-900 block font-bold tracking-[0.2em]">
+                            <strong className="font-sans text-army-900 block font-bold tracking-[0.2em]">
                                 Ladies:
                             </strong>
                             <p className="text-stone-600 font-light uppercase">

@@ -1,1 +1,15 @@
 @import "tailwindcss";
+
+@theme {
+  --color-army-50: #f8f8f2;
+  --color-army-100: #ecefdf;
+  --color-army-200: #d9dfc2;
+  --color-army-300: #c2cc9f;
+  --color-army-400: #aab57d;
+  --color-army-500: #919d61;
+  --color-army-600: #7a8550;
+  --color-army-700: #677146;
+  --color-army-800: #58603d;
+  --color-army-900: #4d5437;
+  --color-army-950: #434932;
+}

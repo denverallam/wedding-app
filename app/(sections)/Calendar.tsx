@@ -97,9 +97,9 @@ export const SaveTheDate = () => {
                 {/* Section Header */}
                 <div className="space-y-2 text-center">
                     <h2 className="text-3xl sm:text-4xl font-light tracking-[0.12em] text-stone-950 uppercase leading-tight">
-                        Save <span className="text-amber-900 font-serif italic lowercase tracking-normal mx-1">the</span> date
+                        Save <span className="text-army-900 font-serif italic lowercase tracking-normal mx-1">the</span> date
                     </h2>
-                    <div className="w-6 h-[1px] bg-amber-800/40 mx-auto my-3"></div>
+                    <div className="w-6 h-[1px] bg-army-800/40 mx-auto my-3"></div>
                     <span className="uppercase tracking-[0.4em] text-[9px] md:text-[10px] text-stone-500 font-sans block font-semibold">
                         August 28, 2026 — Friday
                     </span>
@@ -135,7 +135,7 @@ export const SaveTheDate = () => {
                                                 initial={{ scale: 0.8, opacity: 0 }}
                                                 animate={{ scale: 1, opacity: 1 }}
                                                 transition={{ delay: 0.5, type: "spring" }}
-                                                className="absolute w-6 h-6 rounded-full bg-amber-900 -z-0 shadow-xs"
+                                                className="absolute w-6 h-6 rounded-full bg-army-900 -z-0 shadow-xs"
                                             />
                                         )}
                                     </div>
@@ -180,7 +180,7 @@ export const SaveTheDate = () => {
                                     </div>
                                 </div>
                             ) : (
-                                <div className="text-xs font-sans tracking-[0.25em] text-amber-900 uppercase font-semibold bg-white/30 py-3 text-center border border-stone-200/50 rounded-sm w-full">
+                                <div className="text-xs font-sans tracking-[0.25em] text-army-900 uppercase font-semibold bg-white/30 py-3 text-center border border-stone-200/50 rounded-sm w-full">
                                     Today is our Wedding Day!
                                 </div>
                             )}

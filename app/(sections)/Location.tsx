@@ -7,8 +7,8 @@ export const Location = () => {
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
-        <div className="absolute top-6 left-6 bg-white/90 backdrop-blur-sm p-4 rounded shadow-md font-sans max-w-xs border border-amber-100">
-            <h4 className="font-serif text-lg text-amber-900">Getting There</h4>
+        <div className="absolute top-6 left-6 bg-white/90 backdrop-blur-sm p-4 rounded shadow-md font-sans max-w-xs border border-army-100">
+            <h4 className="font-serif text-lg text-army-900">Getting There</h4>
             <p className="text-xs text-gray-600 mt-1">Valet parking is available at the main entrance of The Plaza Hotel starting at 5:30 PM.</p>
         </div>
     </section >

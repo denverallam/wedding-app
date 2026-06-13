@@ -21,7 +21,7 @@ export default function WeddingWebsite() {
 
 
   return (
-    <div className="bg-[#FAF9F6] text-[#333333] font-serif antialiased selection:bg-amber-100">
+    <div className="bg-[#FAF9F6] text-[#333333] font-serif antialiased selection:bg-army-100">
       <Hero />
       <SaveTheDate />
       <Entourage />
