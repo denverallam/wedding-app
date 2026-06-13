@@ -1,3 +1,4 @@
+import { Attire } from "./(sections)/Attire";
 import { Details } from "./(sections)/Details";
 import { Entourage } from "./(sections)/Entourage";
 import { Hero } from "./(sections)/Hero";
@@ -23,8 +24,7 @@ export default function WeddingWebsite() {
       <Hero />
       <Entourage />
       <Details />
-      {/* <CurtainPrenup /> */}
-      {/* <Location /> */}
+      <Attire />
       <RSVP />
       <footer className="py-6 px-4 bg-[#333333] text-white/60 text-center font-sans text-xs tracking-wider">
         Thank you for being part of our story. #JEROMEboundtofoRIVA
