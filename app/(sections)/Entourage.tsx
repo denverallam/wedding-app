@@ -9,7 +9,7 @@ const PrimaryText = ({ children }: { children: ReactNode }) => {
 }
 
 const SecondaryText = ({ children, className }: { children: ReactNode, className?: string }) => {
-    return <strong className={`font-sans text-stone-900 block text-xs uppercase tracking-[0.2em] font-semibold ${className}`}>{children}</strong>
+    return <strong className="font-sans text-stone-900 block text-xs uppercase tracking-[0.2em] font-semibold text-center md:text-inherit w-full">{children}</strong>
 }
 
 const NameText = ({ children, orientation }: { children: ReactNode, orientation: 'left' | 'right' }) => {
@@ -40,6 +40,23 @@ export const Entourage = () => {
                     <p className="font-sans text-[10px] md:text-xs uppercase tracking-widest text-stone-400 mt-1 md:mt-2">Those standing by our side</p>
                 </div>
 
+                {/* Parents of the Couple */}
+                <div className="space-y-4">
+                    <PrimaryText>Parents of the Couple</PrimaryText>
+                    <TwoColumnContainer>
+                        <strong className="font-sans text-stone-900 block text-xs uppercase tracking-[0.2em] font-semibold text-right w-full">Parents of the Groom</strong>
+                        <strong className="font-sans text-stone-900 block text-xs uppercase tracking-[0.2em] font-semibold text-left w-full">Parents of the Bride</strong>
+                    </TwoColumnContainer>
+                    <TwoColumnContainer>
+                        <NameText orientation="right">Mr. Roger Dalupang</NameText>
+                        <NameText orientation="left">Mrs. Jane Dalupang</NameText>
+                        <NameText orientation="right">Mr. Melanio Allam</NameText>
+                        <NameText orientation="left">Mrs. Sarah Allam</NameText>
+                    </TwoColumnContainer>
+                </div>
+
+                <hr className="border-amber-100 max-w-xs mx-auto" />
+
                 {/* 1. Principal Sponsors */}
                 <div className="space-y-4">
                     <PrimaryText>Principal Sponsors</PrimaryText>
@@ -65,8 +82,8 @@ export const Entourage = () => {
                 {/* 2. Best Man & Maid of Honor */}
                 <div className="space-y-4">
                     <TwoColumnContainer>
-                        <SecondaryText className="text-right">Best Man</SecondaryText>
-                        <SecondaryText className="text-left">Maid of Honor</SecondaryText>
+                        <strong className="font-sans text-stone-900 block text-xs uppercase tracking-[0.2em] font-semibold text-right w-full">Best Man</strong>
+                        <strong className="font-sans text-stone-900 block text-xs uppercase tracking-[0.2em] font-semibold text-left w-full">Maid of Honor</strong>
                     </TwoColumnContainer>
                     <TwoColumnContainer>
                         <NameText orientation="right">Mr. Mark John Vicente</NameText>
@@ -81,7 +98,7 @@ export const Entourage = () => {
                     <PrimaryText>Secondary Sponsors</PrimaryText>
                     <div className="flex flex-col gap-y-6 max-w-4xl mx-auto text-gray-600 font-sans text-xs">
                         <div className="flex flex-col items-center mx-auto w-full">
-                            <SecondaryText>Candle</SecondaryText>
+                            <strong className="font-sans text-stone-900 block text-xs uppercase tracking-[0.2em] font-semibold text-center w-full">Candle</strong>
                             <LabelText>To light our path</LabelText>
                             <TwoColumnContainer>
                                 <NameText orientation="right">Mr. Seann Santos</NameText>
@@ -89,7 +106,7 @@ export const Entourage = () => {
                             </TwoColumnContainer>
                         </div>
                         <div className="flex flex-col items-center mx-auto w-full border-t border-amber-100/40 pt-4">
-                            <SecondaryText>Cord</SecondaryText>
+                            <strong className="font-sans text-stone-900 block text-xs uppercase tracking-[0.2em] font-semibold text-center w-full">Cord</strong>
                             <LabelText>To bind us together</LabelText>
                             <TwoColumnContainer>
                                 <NameText orientation="right">Mr. John Jefferson Sy</NameText>
@@ -97,7 +114,7 @@ export const Entourage = () => {
                             </TwoColumnContainer>
                         </div>
                         <div className="flex flex-col items-center mx-auto w-full border-t border-amber-100/40 pt-4">
-                            <SecondaryText>Veil</SecondaryText>
+                            <strong className="font-sans text-stone-900 block text-xs uppercase tracking-[0.2em] font-semibold text-center w-full">Veil</strong>
                             <LabelText>To clothe as one</LabelText>
                             <TwoColumnContainer>
                                 <NameText orientation="right">Mr. Jaymond Senique</NameText>
@@ -112,32 +129,21 @@ export const Entourage = () => {
                 {/* 4. Groomsmen & Bridesmaids */}
                 <div className="space-y-4">
                     <TwoColumnContainer>
-                        <SecondaryText className="text-right">Groomsmen</SecondaryText>
-                        <SecondaryText className="text-left">Bridesmaids</SecondaryText>
+                        <strong className="font-sans text-stone-900 block text-xs uppercase tracking-[0.2em] font-semibold text-right w-full">Groomsmen</strong>
+                        <strong className="font-sans text-stone-900 block text-xs uppercase tracking-[0.2em] font-semibold text-left w-full">Bridesmaids</strong>
                     </TwoColumnContainer>
                     <TwoColumnContainer>
-                        <NameText orientation="right">Mr. Cenon Ibay Jr.</NameText>
-                        <NameText orientation="left">Ms. Carla Eloiza Bagunu</NameText>
-                        <NameText orientation="right">Mr. Niko Angelo Tabangin</NameText>
-                        <NameText orientation="left">Ms. Marijoyce Zipagan</NameText>
-                        <NameText orientation="right">Mr. Hardy Batalla</NameText>
-                        <NameText orientation="left">Ms. Joanna Rose Sapnu</NameText>
-                        <NameText orientation="right">Mr. Dax Paulo Binag</NameText>
-                        <NameText orientation="left">Ms. Pebie Angelica Binag</NameText>
-                        <NameText orientation="right">Mr. Marc Edgar Mamauag</NameText>
-                        <NameText orientation="left">Ms. Ma Angelica Ignes</NameText>
-                        <NameText orientation="right">Mr. Jan Paulo Dalupang</NameText>
-                        <NameText orientation="left">Ms. Harvey Allam</NameText>
-                        <NameText orientation="right">Mr. Denver Allam</NameText>
-                        <NameText orientation="left">Ms. Angelu Bagunu</NameText>
-                        <NameText orientation="right">Mr. Roseven Tumaliuan</NameText>
-                        <NameText orientation="left">Ms. Josephine Lu Ronquillo</NameText>
-                        <NameText orientation="right">Mr. Paul John Beldad</NameText>
-                        <NameText orientation="left">Ms. Arbie Christine Beldad</NameText>
-                        <NameText orientation="right">Mr. Japh Razzer Manansala</NameText>
-                        <NameText orientation="left">Ms. Elgierene Maligaya</NameText>
-                        <NameText orientation="right">Mr. Roque Raunch Bautista</NameText>
-                        <NameText orientation="left">Ms. Zuzhane Angel Espejo</NameText>
+                        <NameText orientation="right">Mr. Cenon Ibay Jr.</NameText><NameText orientation="left">Ms. Carla Eloiza Bagunu</NameText>
+                        <NameText orientation="right">Mr. Niko Angelo Tabangin</NameText><NameText orientation="left">Ms. Marijoyce Zipagan</NameText>
+                        <NameText orientation="right">Mr. Hardy Batalla</NameText><NameText orientation="left">Ms. Joanna Rose Sapnu</NameText>
+                        <NameText orientation="right">Mr. Dax Paulo Binag</NameText><NameText orientation="left">Ms. Pebie Angelica Binag</NameText>
+                        <NameText orientation="right">Mr. Marc Edgar Mamauag</NameText><NameText orientation="left">Ms. Ma Angelica Ignes</NameText>
+                        <NameText orientation="right">Mr. Jan Paulo Dalupang</NameText><NameText orientation="left">Ms. Harvey Allam</NameText>
+                        <NameText orientation="right">Mr. Denver Allam</NameText><NameText orientation="left">Ms. Raquel Antoinette Dalupang</NameText>
+                        <NameText orientation="right">Mr. Roseven Tumaliuan</NameText><NameText orientation="left">Ms. Josephine Lu Ronquillo</NameText>
+                        <NameText orientation="right">Mr. Paul John Beldad</NameText><NameText orientation="left">Ms. Arbie Christine Beldad</NameText>
+                        <NameText orientation="right">Mr. Japh Razzer Manansala</NameText><NameText orientation="left">Ms. Elgierene Maligaya</NameText>
+                        <NameText orientation="right">Mr. Roque Raunch Bautista</NameText><NameText orientation="left">Ms. Zuzhane Angel Espejo</NameText>
                     </TwoColumnContainer>
                 </div>
 
@@ -147,7 +153,7 @@ export const Entourage = () => {
                 <div className="space-y-6">
                     <div className="flex flex-col gap-y-6 max-w-4xl mx-auto text-gray-600 font-sans text-xs">
                         <div className="flex flex-col items-center mx-auto w-full">
-                            <SecondaryText>Ring Bearer</SecondaryText>
+                            <strong className="font-sans text-stone-900 block text-xs uppercase tracking-[0.2em] font-semibold text-center w-full">Ring Bearer</strong>
                             <LabelText>To carry our symbol of love</LabelText>
                             <TwoColumnContainer>
                                 <NameText orientation="right">Christopher Nicole Verdote</NameText>
@@ -155,7 +161,7 @@ export const Entourage = () => {
                             </TwoColumnContainer>
                         </div>
                         <div className="flex flex-col items-center mx-auto w-full border-t border-amber-100/40 pt-4">
-                            <SecondaryText>Bible Bearer</SecondaryText>
+                            <strong className="font-sans text-stone-900 block text-xs uppercase tracking-[0.2em] font-semibold text-center w-full">Bible Bearer</strong>
                             <LabelText>To carry our symbol of faith</LabelText>
                             <TwoColumnContainer>
                                 <NameText orientation="right">Vincent Fugaban</NameText>
@@ -163,7 +169,7 @@ export const Entourage = () => {
                             </TwoColumnContainer>
                         </div>
                         <div className="flex flex-col items-center mx-auto w-full border-t border-amber-100/40 pt-4">
-                            <SecondaryText>Coin Bearer</SecondaryText>
+                            <strong className="font-sans text-stone-900 block text-xs uppercase tracking-[0.2em] font-semibold text-center w-full">Coin Bearer</strong>
                             <LabelText>To carry our symbol of treasures</LabelText>
                             <TwoColumnContainer>
                                 <NameText orientation="right">Manuel Joseph Servando</NameText>
@@ -178,19 +184,14 @@ export const Entourage = () => {
                 {/* 6. Flower Girls */}
                 <div className="space-y-4">
                     <div>
-                        <SecondaryText className="text-center">Flower Girls</SecondaryText>
+                        <strong className="font-sans text-stone-900 block text-xs uppercase tracking-[0.2em] font-semibold text-center w-full">Flower Girls</strong>
                         <LabelText>To shower our aisle with flowers</LabelText>
                     </div>
                     <TwoColumnContainer>
-                        <NameText orientation="right">Nathalie Mabbayad</NameText>
-                        <NameText orientation="left">Janelle Ashley Dalupang</NameText>
-                        <NameText orientation="right">Ava Chelsea Ancheta</NameText>
-                        <NameText orientation="left">Pamela Bianca Andres</NameText>
-                        <NameText orientation="right">Rochel Belesario</NameText>
-                        <NameText orientation="left">Holyanna Acosta</NameText>
-                        <NameText orientation="right">Coleen Ann Alcantara</NameText>
-                        <NameText orientation="left">Ms. Raquel Antoinette Dalupang</NameText>
-                      
+                        <NameText orientation="right">Angelu Bagunu</NameText><NameText orientation="left">Nathalie Mabbayad</NameText>
+                        <NameText orientation="right">Janelle Ashley Dalupang</NameText><NameText orientation="left">Ava Chelsea Ancheta</NameText>
+                        <NameText orientation="right">Pamela Bianca Andres</NameText><NameText orientation="left">Rochel Belesario</NameText>
+                        <NameText orientation="right">Holyanna Acosta</NameText><NameText orientation="left">Coleen Ann Alcantara</NameText>
                     </TwoColumnContainer>
                 </div>
             </motion.div >
