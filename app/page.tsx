@@ -1,4 +1,5 @@
 import { Attire } from "./(sections)/Attire";
+import { SaveTheDate } from "./(sections)/Calendar";
 import { Details } from "./(sections)/Details";
 import { Entourage } from "./(sections)/Entourage";
 import { Hero } from "./(sections)/Hero";
@@ -22,6 +23,7 @@ export default function WeddingWebsite() {
   return (
     <div className="bg-[#FAF9F6] text-[#333333] font-serif antialiased selection:bg-amber-100">
       <Hero />
+      <SaveTheDate />
       <Entourage />
       <Details />
       <Attire />
