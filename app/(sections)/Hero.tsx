@@ -9,6 +9,13 @@ interface HeroProps {
     guestName?: string
 }
 
+import { Great_Vibes } from "next/font/google";
+
+const greatVibes = Great_Vibes({
+    weight: "400",
+    subsets: ["latin"],
+});
+
 export const Hero: React.FC<HeroProps> = ({
     hasRsvp = false,
     guestName
@@ -70,20 +77,19 @@ export const Hero: React.FC<HeroProps> = ({
                 {/* Main Dynamic Names Container with Pop-up Sequencing */}
                 <motion.h1
                     variants={nameContainerVariant}
-                    className="text-4xl sm:text-6xl lg:text-7xl xl:text-8xl font-light text-army-950 tracking-[0.08em] uppercase leading-tight lg:whitespace-nowrap flex flex-col sm:flex-row items-center justify-center"
+                    className="text-6xl sm:text-6xl lg:text-7xl xl:text-8xl font-light text-army-950 tracking-[0.08em] leading-tight lg:whitespace-nowrap flex flex-col sm:flex-row items-center justify-center"
                 >
-                    <motion.span variants={nameItemVariant} className="inline-block">
+                    <motion.span variants={nameItemVariant} className={`${greatVibes.className} inline-block`}>
                         Jerome
                     </motion.span>
 
                     <motion.span
                         variants={nameItemVariant}
-                        className="text-army-400 font-serif italic block sm:inline sm:text-[0.9em] sm:lowercase sm:tracking-normal sm:mx-2 lg:mx-4 my-1 sm:my-0"
-                    >
+                        className={`${greatVibes.className} inline-block mx-4`}>
                         &
                     </motion.span>
 
-                    <motion.span variants={nameItemVariant} className="inline-block">
+                    <motion.span variants={nameItemVariant} className={`${greatVibes.className} inline-block`}>
                         Riva
                     </motion.span>
                 </motion.h1>
@@ -91,14 +97,14 @@ export const Hero: React.FC<HeroProps> = ({
                 {/* Shared Invitation Text & Dynamic Guest Greeting */}
                 <div className="space-y-4 max-w-md mx-auto">
                     {guestName && (
-                        <motion.span 
+                        <motion.span
                             variants={nameItemVariant}
-                            className="font-sans text-sm md:text-base text-army-700 block uppercase tracking-[0.35em] font-semibold mt-8"
+                            className="bg-army-1000 text-white/80 py-2 font-sans text-sm md:text-base block uppercase tracking-[0.35em] font-semibold mt-4"
                         >
-                            Dear {guestName},
+                            Dear {guestName}
                         </motion.span>
                     )}
-                    
+
                     {/* Minimalist Message Text */}
                     <p className="text-[10px] text- md:text-xs font-sans font-medium tracking-[0.3em] text-army-400 uppercase leading-relaxed">
                         We invite you to share in our joy as we step into forever
@@ -107,10 +113,10 @@ export const Hero: React.FC<HeroProps> = ({
 
                 {/* Date & Location Visual Cluster */}
                 <div className="pt-2 space-y-2 w-full">
-                    <p className="text-xl md:text-2xl font-light tracking-[0.35em] text-army-900 border-y border-army-200/60 py-3 max-w-xs mx-auto pl-[0.35em]">
-                        08 28 2026
+                    <p className="text-sm tracking-[0.2em] uppercase text-army-800 font-sans font-semibold pt-1">
+                        28 August 2026 | 3:00PM
                     </p>
-                    <p className="text-xs md:text-sm tracking-[0.2em] uppercase text-army-800 font-sans font-semibold pt-1">
+                    <p className="text-sm tracking-[0.2em] uppercase text-army-800 font-sans font-semibold pt-1">
                         Ermita de San Jacinto
                     </p>
                 </div>

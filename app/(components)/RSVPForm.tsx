@@ -47,7 +47,7 @@ export const RSVPForm: React.FC<RSVPFormProps> = ({
     };
 
     return (
-        <section className="relative min-h-screen flex flex-col items-center justify-center bg-cover bg-center px-6 md:px-12 py-12 overflow-hidden" id="rsvp">
+        <section className="relative min-h-screen flex flex-col items-center justify-start bg-[url('/assets/rsvp.JPG')] bg-cover bg-center px-12 py-12 overflow-hidden" id="rsvp">
             <div className="absolute inset-4 md:inset-8 border border-army-200/50 pointer-events-none z-10" />
 
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeInVariant} className="text-army-800 space-y-10 md:space-y-12 max-w-md w-full relative z-20 flex flex-col items-center">
@@ -66,7 +66,7 @@ export const RSVPForm: React.FC<RSVPFormProps> = ({
                                 To {guestName},
                             </span>
 
-                            <p className="text-[10px] md:text-[11px] text-army-500 leading-relaxed max-w-sm mx-auto">
+                            <p className="font-sans text-[10px] md:text-[11px] text-army-500 leading-relaxed max-w-sm mx-auto">
                                 This invitation is extended exclusively to{" "}
                                 <span className="font-medium text-army-700">
                                     {guestName}
@@ -82,48 +82,48 @@ export const RSVPForm: React.FC<RSVPFormProps> = ({
                     )}
                 </div>
 
-                <div className="space-y-8 font-sans text-left bg-white/40 backdrop-blur-[2px] p-6 md:p-8 border border-army-200/50 rounded-sm shadow-xs w-full">
+                <div className="space-y-8 font-sans text-left bg-army-1000 backdrop-blur-[2px] p-6 md:p-8 border border-white/20 rounded-sm shadow-xs w-full">
                     <AnimatePresence mode="wait">
                         {submitted && !isEditing ? (
                             <motion.div key="confirmed" initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-center py-6 space-y-6">
                                 <div className="space-y-3">
-                                    <p className="text-sm uppercase tracking-[0.2em] font-semibold text-army-950">
+                                    <p className="text-sm uppercase tracking-[0.2em] font-semibold text-white/80">
                                         {status ? "We can’t wait to celebrate with you." : "We will miss you dearly."}
                                     </p>
-                                    <p className="text-[10px] text-army-400 uppercase tracking-[0.2em]">
+                                    <p className="text-[10px] text-white/80 uppercase tracking-[0.2em]">
                                         {status ? "Thank you for sharing in our joy." : "Thank you for your kind wishes."}
                                     </p>
                                 </div>
-                                <button onClick={() => setIsEditing(true)} className="w-full sm:w-auto px-8 py-3 border border-army-300 text-army-600 hover:border-army-950 hover:text-army-950 transition-all duration-300 text-[9px] uppercase tracking-[0.2em] font-medium">
+                                <button onClick={() => setIsEditing(true)} className="w-full sm:w-auto px-8 py-3 border border-army-300 bg-white/80 hover:bg-army-1000 hover:text-white/80 hover:text-white/80 transition-all duration-300 text-[9px] uppercase tracking-[0.2em] font-medium">
                                     Edit your response
                                 </button>
                             </motion.div>
                         ) : (
                             <motion.div key="form" initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="space-y-8">
                                 <div className="space-y-2">
-                                    <label className="block text-[9px] uppercase tracking-[0.25em] font-semibold text-army-400">
+                                    <label className="block text-[12px] uppercase tracking-[0.25em] font-semibold text-white/80">
                                         Seats Reserved
                                     </label>
 
-                                    <div className="py-2 border-b border-army-200/60 text-xs uppercase tracking-[0.15em] text-army-500">
+                                    <div className="py-2 border-b border-army-200/60 text-xs uppercase tracking-[0.15em] text-white/80">
                                         {guestCount} {guestCount === 1 ? 'Seat' : 'Seats'}
                                     </div>
 
-                                    <p className="text-[9px] md:text-[10px] text-army-400/90 tracking-[0.12em] uppercase leading-relaxed pt-1">
+                                    <p className="text-[9px] md:text-[10px] text-white/80 tracking-[0.12em] uppercase leading-relaxed pt-1">
                                         Kindly note that attendance is limited to the number of seats reserved in your invitation. We regret that we are unable to accommodate additional guests.
                                     </p>
                                 </div>
 
                                 <div className="space-y-2">
-                                    <label className="block text-[9px] uppercase tracking-[0.25em] font-semibold text-army-400">Note <span className="text-army-300 font-normal">(Optional)</span></label>
-                                    <textarea value={note} onChange={(e) => setNote(e.target.value)} className="w-full bg-transparent border-b border-army-200/60 text-xs py-2 focus:outline-none placeholder:text-army-300" placeholder="A note for the couple..." rows={2} />
+                                    <label className="block text-[12px] uppercase tracking-[0.25em] font-semibold text-white/80">Note <span className="font-normal">(Optional)</span></label>
+                                    <textarea value={note} onChange={(e) => setNote(e.target.value)} className="w-full bg-transparent border-b border-army-200/60 text-xs py-2 focus:outline-none placeholder:text-white/80 text-white/80" placeholder="A note for the couple..." rows={2} />
                                 </div>
 
                                 <div className="flex flex-col gap-4">
-                                    <button disabled={isPending} onClick={() => handleSelection(true)} className="w-full bg-army-950 text-white text-[10px] uppercase tracking-[0.25em] py-4 border border-army-950 transition disabled:opacity-50 disabled:cursor-not-allowed hover:bg-transparent hover:text-army-950">
+                                    <button disabled={isPending} onClick={() => handleSelection(true)} className="w-full sm:w-auto px-8 py-3 border border-army-300 bg-white/80 hover:bg-army-1000 hover:text-white/80 hover:text-white/80 transition-all duration-300 text-[9px] uppercase tracking-[0.2em] font-bold">
                                         {isPending ? "Updating..." : "Joyfully Accept"}
                                     </button>
-                                    <button disabled={isPending} onClick={() => handleSelection(false)} className="w-full bg-transparent text-army-700 text-[10px] uppercase tracking-[0.25em] py-4 border border-army-200 transition disabled:opacity-50 disabled:cursor-not-allowed hover:bg-red-50/50">
+                                    <button disabled={isPending} onClick={() => handleSelection(false)} className="w-full sm:w-auto px-8 py-3 border border-army-300 bg-white/80 hover:bg-army-1000 hover:text-white/80 hover:text-white/80 transition-all duration-300 text-[9px] uppercase tracking-[0.2em] font-bold">
                                         {isPending ? "Updating..." : "Regretfully Decline"}
                                     </button>
                                 </div>

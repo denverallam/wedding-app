@@ -6,7 +6,7 @@ import { fadeInVariant } from "../page";
 
 export const SaveTheDate = () => {
     // Target wedding date updated to: August 28, 2026
-    const targetDate = new Date("2026-08-28T00:00:00");
+    const targetDate = new Date("2026-08-28T00:00:00"); 
 
     // Dynamic Countdown State
     const [timeLeft, setTimeLeft] = useState({
@@ -79,10 +79,10 @@ export const SaveTheDate = () => {
 
     return (
         <section
-            className="relative min-h-screen flex flex-col items-center justify-center bg-cover bg-center px-6 md:px-12 py-12 overflow-hidden"
+            className="relative min-h-screen flex flex-col items-center justify-center bg-army-1000 bg-cover bg-center px-12 py-12 overflow-hidden"
         >
             {/* Elegant Editorial Framed Border Inside the Viewport */}
-            <div className="absolute inset-4 md:inset-8 border border-army-200/50 pointer-events-none z-10" />
+            <div className="absolute inset-4 md:inset-8 border border-taupe-200 pointer-events-none z-10" />
 
             <motion.div
                 initial="hidden"
@@ -93,18 +93,18 @@ export const SaveTheDate = () => {
             >
                 {/* Section Header */}
                 <div className="space-y-2 text-center">
-                    <h2 className="text-3xl sm:text-4xl font-light tracking-[0.12em] text-army-950 uppercase leading-tight">
-                        Save <span className="text-army-900 font-serif italic lowercase tracking-normal mx-1">the</span> date
+                    <h2 className="text-3xl sm:text-4xl font-light tracking-[0.12em] text-white uppercase leading-tight">
+                        Save <span className="font-serif italic lowercase tracking-normal mx-1">the</span> date
                     </h2>
 
-                    <span className="uppercase tracking-[0.25em] text-[10px] md:text-[11px] text-army-400 font-sans block font-bold">
+                    <span className="uppercase tracking-[0.25em] text-[10px] md:text-[11px] text-white font-sans block font-bold">
                         August 28, 2026 — Friday
                     </span>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center w-full max-w-3xl mx-auto">
 
-                    <div className="bg-white/40 backdrop-blur-[2px] p-6 border border-army-200/50 rounded-sm shadow-xs max-w-sm w-full mx-auto">
+                    <div className="bg-white/80 backdrop-blur-[2px] p-6 border border-army-200/50 rounded-sm shadow-xs max-w-sm w-full mx-auto">
                         <div className="text-center font-serif italic text-army-900 text-lg uppercase tracking-widest mb-4">
                             August 2026
                         </div>
@@ -139,46 +139,46 @@ export const SaveTheDate = () => {
 
                     <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-6 max-w-sm w-full mx-auto">
                         <div className="space-y-2 w-full">
-                            <h3 className="uppercase tracking-[0.25em] text-[10px] md:text-[11px] text-army-400 font-sans block font-bold">
+                            <h3 className="uppercase tracking-[0.25em] text-[10px] md:text-[11px] text-white/80 font-sans block font-bold">
                                 Countdown to Forever
                             </h3>
 
                             {!timeLeft.isCompleted ? (
-                                <div className="grid grid-cols-4 gap-2 bg-white/20 backdrop-blur-[1px] py-3 px-2 border border-army-200/50 rounded-sm w-full">
+                                <div className="grid grid-cols-4 gap-2 bg-white/80 backdrop-blur-[1px] py-3 px-2 border border-army-200/50 rounded-sm w-full">
                                     <div className="flex flex-col items-center">
                                         <span className="text-xl md:text-2xl font-light text-army-900">
                                             {String(timeLeft.days).padStart(2, '0')}
                                         </span>
-                                        <span className="text-[7px] md:text-[8px] font-sans tracking-[0.18em] text-army-400 uppercase font-medium">Days</span>
+                                        <span className="text-[7px] md:text-[8px] font-sans tracking-[0.18em] text-army-900 uppercase font-medium">Days</span>
                                     </div>
                                     <div className="flex flex-col items-center border-l border-army-200/40">
                                         <span className="text-xl md:text-2xl font-light text-army-900">
                                             {String(timeLeft.hours).padStart(2, '0')}
                                         </span>
-                                        <span className="text-[7px] md:text-[8px] font-sans tracking-[0.18em] text-army-400 uppercase font-medium">Hours</span>
+                                        <span className="text-[7px] md:text-[8px] font-sans tracking-[0.18em] text-army-900 uppercase font-medium">Hours</span>
                                     </div>
                                     <div className="flex flex-col items-center border-l border-army-200/40">
                                         <span className="text-xl md:text-2xl font-light text-army-900">
                                             {String(timeLeft.minutes).padStart(2, '0')}
                                         </span>
-                                        <span className="text-[7px] md:text-[8px] font-sans tracking-[0.18em] text-army-400 uppercase font-medium">Mins</span>
+                                        <span className="text-[7px] md:text-[8px] font-sans tracking-[0.18em] text-army-900 uppercase font-medium">Mins</span>
                                     </div>
                                     <div className="flex flex-col items-center border-l border-army-200/40">
                                         <span className="text-xl md:text-2xl font-light text-army-900">
                                             {String(timeLeft.seconds).padStart(2, '0')}
                                         </span>
-                                        <span className="text-[7px] md:text-[8px] font-sans tracking-[0.18em] text-army-400 uppercase font-medium">Secs</span>
+                                        <span className="text-[7px] md:text-[8px] font-sans tracking-[0.18em] text-army-900 uppercase font-medium">Secs</span>
                                     </div>
                                 </div>
                             ) : (
-                                <div className="text-xs font-sans tracking-[0.25em] text-army-900 uppercase font-semibold bg-white/30 py-3 text-center border border-army-200/50 rounded-sm w-full">
+                                <div className="text-xs font-sans tracking-[0.25em] text-army-900 uppercase font-semibold bg-white/80 py-3 text-center border border-army-200/50 rounded-sm w-full">
                                     Today is our Wedding Day!
                                 </div>
                             )}
                         </div>
 
                         <div className="space-y-3 w-full pt-2">
-                            <span className="text-[9px] md:text-[10px] font-sans tracking-[0.2em] text-army-400 uppercase font-medium block">
+                            <span className="text-[9px] md:text-[10px] font-sans tracking-[0.2em] text-white/80 uppercase font-medium block">
                                 Add to calendar:
                             </span>
                             <div className="flex flex-col sm:flex-row gap-3 w-full">

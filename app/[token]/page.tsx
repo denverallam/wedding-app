@@ -24,16 +24,17 @@ export default async function Page({
     const { name } = guest
 
     return (
-        <div className="bg-[#FAF9F6] text-[#333333] font-serif antialiased selection:bg-amber-100">
+        <div className="bg-[#FAF9F6] text-[#333333] font-serif antialiased">
             <Hero hasRsvp={!!guest} guestName={name} />
             <SaveTheDate />
             <Entourage />
+            {/* TODO: slideshow here */}
             <Details />
             <Attire />
             <RSVPSection {...guest} />
-            <footer className="py-6 px-4 bg-army-950 text-white/60 text-center font-sans text-[10px] md:text-xs tracking-[0.25em]">
-                Thank you for being part of our story. #JEROMEboundtofoRIVA
+            <footer className="py-6 px-4 bg-army-1000 text-white/80 text-center font-sans text-[10px] md:text-xs tracking-[0.25em]">
+                Thank you for being part of our story. <span className="font-bold">#JEROMEboundtofoRIVA</span>
             </footer>
-        </div>
+        </div >
     );
 }

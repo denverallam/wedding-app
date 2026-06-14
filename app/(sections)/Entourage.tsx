@@ -6,7 +6,7 @@ import { ReactNode } from "react";
 
 export const PrimaryText = ({ children }: { children: ReactNode }) => {
     return (
-        <h3 className="text-center text-[14px] md:text-sm font-bold tracking-[0.15em] uppercase text-army-700 font-sans">
+        <h3 className="text-center text-[14px] md:text-sm font-bold tracking-[0.15em] uppercase text-black/80 font-sans">
             {children}
         </h3>
     );
@@ -14,7 +14,7 @@ export const PrimaryText = ({ children }: { children: ReactNode }) => {
 
 export const NameText = ({ children, orientation }: { children: ReactNode, orientation: 'left' | 'right' }) => {
     return (
-        <div className={`text-${orientation} text-[10px] md:text-[12px] font-medium tracking-[0.08em] uppercase text-taupe-700 leading-normal`}>
+        <div className={`text-${orientation} text-[10px] md:text-[12px] font-medium tracking-[0.08em] uppercase text-black/80 leading-normal`}>
             {children}
         </div>
     );
@@ -39,7 +39,7 @@ const TwoColumnContainer = ({ children }: { children: ReactNode }) => {
 export const Entourage = () => {
     return (
         <section
-            className="relative min-h-screen flex flex-col items-center justify-center bg-cover bg-center px-6 md:px-12 py-12 overflow-hidden"
+            className="relative min-h-screen flex flex-col items-center bg-white justify-center bg-cover bg-center px-6 md:px-12 py-12 overflow-hidden"
         >
             {/* Elegant Editorial Framed Border Inside the Viewport */}
             <div className="absolute inset-4 md:inset-8 border border-army-200/60 pointer-events-none z-10" />
@@ -117,7 +117,7 @@ export const Entourage = () => {
                             <LabelText>To light our path</LabelText>
                             <TwoColumnContainer>
                                 <NameText orientation="right">Mr. Seann Santos</NameText>
-                                <NameText orientation="left">Ms. Britanny Starling</NameText>
+                                <NameText orientation="left">Ms. Brittany Starling</NameText>
                             </TwoColumnContainer>
                         </div>
                         <div className="flex flex-col items-center mx-auto w-full pt-2">
@@ -130,7 +130,7 @@ export const Entourage = () => {
                         </div>
                         <div className="flex flex-col items-center mx-auto w-full pt-2">
                             <strong className="font-sans text-army-950 block text-[11px] md:text-xs uppercase tracking-[0.15em] font-extrabold text-center w-full">Veil</strong>
-                            <LabelText>To clothe as one</LabelText>
+                            <LabelText>To clothe us as one</LabelText>
                             <TwoColumnContainer>
                                 <NameText orientation="right">Mr. Jaymond Senique</NameText>
                                 <NameText orientation="left">Ms. Lady Elaine Senique</NameText>

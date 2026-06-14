@@ -1,18 +1,14 @@
 'use client';
 
 import { motion } from "framer-motion";
-import { useState } from "react";
 import { fadeInVariant } from "../page";
 import { LabelText, PrimaryText } from "./Entourage";
 
 export const Details = () => {
-    // Independent states to handle visibility toggles for each map
-    const [showCeremonyMap, setShowCeremonyMap] = useState(false);
-    const [showReceptionMap, setShowReceptionMap] = useState(false);
 
     return (
         <section
-            className="relative min-h-screen flex flex-col items-center justify-center bg-cover bg-center px-6 md:px-12 py-12 overflow-hidden"
+            className="relative min-h-screen bg-white flex flex-col items-center justify-center bg-cover bg-center px-6 md:px-12 py-12 overflow-hidden"
         >
             {/* Elegant Editorial Framed Border Inside the Viewport (Matching Hero) */}
             <div className="absolute inset-4 md:inset-8 border border-army-200/50 pointer-events-none z-10" />
@@ -44,7 +40,7 @@ export const Details = () => {
                                 The Ceremony
                             </PrimaryText>
                             <LabelText>
-                                3:30 PM — 4:30 PM
+                                3:00 PM — 4:30 PM
                             </LabelText>
                             <div className="text-[11px] md:text-[12px] text-army-900 font-light tracking-[0.15em] uppercase leading-relaxed pt-1 min-h-[64px] font-semibold">
                                 Ermita de Piedra de San Jacinto <br />
@@ -73,7 +69,7 @@ export const Details = () => {
                                 The Reception
                             </PrimaryText>
                             <LabelText>
-                                6:00 PM — 11:00 PM
+                                5:00 PM — 08:00 PM
                             </LabelText>
                             <div className="text-[11px] md:text-[12px] text-army-700 font-light tracking-[0.15em] uppercase leading-relaxed pt-1 min-h-[64px] font-semibold">
                                 Patio Enrico <br />
