@@ -52,11 +52,34 @@ export const RSVPForm: React.FC<RSVPFormProps> = ({
 
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeInVariant} className="text-army-800 space-y-10 md:space-y-12 max-w-md w-full relative z-20 flex flex-col items-center">
 
-                <div className="space-y-3 text-center">
+                <div className="space-y-4 text-center">
                     <h2 className="text-3xl sm:text-4xl font-light tracking-[0.12em] text-army-950 uppercase leading-tight">
-                        Kindly <span className="text-army-900 font-serif italic lowercase tracking-normal mx-1">reply</span>
+                        Kindly{" "}
+                        <span className="text-army-900 font-serif italic lowercase tracking-normal mx-1">
+                            reply
+                        </span>
                     </h2>
-                    {guestName && <span className="font-sans text-sm text-army-700 block uppercase tracking-[0.35em] font-semibold mb-2">To {guestName},</span>}
+
+                    {guestName && (
+                        <>
+                            <span className="font-sans text-sm text-army-700 block uppercase tracking-[0.35em] font-semibold">
+                                To {guestName},
+                            </span>
+
+                            <p className="text-[10px] md:text-[11px] text-army-500 leading-relaxed max-w-sm mx-auto">
+                                This invitation is extended exclusively to{" "}
+                                <span className="font-medium text-army-700">
+                                    {guestName}
+                                </span>
+                                {guestCount > 1 && (
+                                    <>
+                                        {" "}and their party of {guestCount}
+                                    </>
+                                )}
+                                . We kindly ask that no additional guests be brought.
+                            </p>
+                        </>
+                    )}
                 </div>
 
                 <div className="space-y-8 font-sans text-left bg-white/40 backdrop-blur-[2px] p-6 md:p-8 border border-army-200/50 rounded-sm shadow-xs w-full">
