@@ -117,7 +117,7 @@ export const Entourage = () => {
                             <LabelText>To light our path</LabelText>
                             <TwoColumnContainer>
                                 <NameText orientation="right">Mr. Seann Santos</NameText>
-                                <NameText orientation="left">Ms. Britanny Starlings</NameText>
+                                <NameText orientation="left">Ms. Britanny Starling</NameText>
                             </TwoColumnContainer>
                         </div>
                         <div className="flex flex-col items-center mx-auto w-full pt-2">
