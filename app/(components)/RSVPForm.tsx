@@ -47,7 +47,7 @@ export const RSVPForm: React.FC<RSVPFormProps> = ({
     };
 
     return (
-        <section className="relative min-h-screen flex flex-col items-center justify-start bg-[url('/assets/rsvp.JPG')] bg-cover bg-center px-12 py-12 overflow-hidden" id="rsvp">
+        <section className="relative min-h-screen flex flex-col items-center justify-start bg-[url('https://res.cloudinary.com/dvqe9mwrs/image/upload/f_auto,q_auto,w_1920/v1781449753/photo6_zzxsxw.webp')] bg-cover bg-center px-12 py-12 overflow-hidden" id="rsvp">
             <div className="absolute inset-4 md:inset-8 border border-army-200/50 pointer-events-none z-10" />
 
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeInVariant} className="text-army-800 space-y-10 md:space-y-12 max-w-md w-full relative z-20 flex flex-col items-center">
