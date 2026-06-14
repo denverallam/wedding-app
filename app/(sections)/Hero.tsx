@@ -3,7 +3,16 @@
 import { motion } from "framer-motion";
 import { fadeInVariant } from "../page";
 
-export const Hero = () => {
+
+interface HeroProps {
+    hasRsvp?: boolean;
+    guestName?: string
+}
+
+export const Hero: React.FC<HeroProps> = ({
+    hasRsvp = false,
+    guestName
+}) => {
     const handleScrollToRsvp = () => {
         const rsvpSection = document.getElementById("rsvp");
         if (rsvpSection) {
@@ -39,7 +48,7 @@ export const Hero = () => {
 
     return (
         <section
-            className="relative min-h-screen flex flex-col items-center justify-center text-center bg-cover bg-center px-6 md:px-12 py-12 overflow-hidden"
+            className="relative min-h-screen flex flex-col items-center justify-center text-center bg-cover bg-center px-12 py-12 overflow-hidden"
         >
             {/* Elegant Editorial Framed Border Inside the Viewport */}
             <div className="absolute inset-4 md:inset-8 border border-army-200/50 pointer-events-none z-10" />
@@ -79,10 +88,22 @@ export const Hero = () => {
                     </motion.span>
                 </motion.h1>
 
-                {/* Minimalist Message Text */}
-                <p className="text-[10px] md:text-xs font-sans font-medium tracking-[0.3em] text-army-400 uppercase max-w-sm mx-auto leading-relaxed">
-                    We invite you to share in our joy as we step into forever
-                </p>
+                {/* Shared Invitation Text & Dynamic Guest Greeting */}
+                <div className="space-y-4 max-w-md mx-auto">
+                    {guestName && (
+                        <motion.span 
+                            variants={nameItemVariant}
+                            className="font-sans text-sm md:text-base text-army-700 block uppercase tracking-[0.35em] font-semibold mt-8"
+                        >
+                            Dear {guestName},
+                        </motion.span>
+                    )}
+                    
+                    {/* Minimalist Message Text */}
+                    <p className="text-[10px] text- md:text-xs font-sans font-medium tracking-[0.3em] text-army-400 uppercase leading-relaxed">
+                        We invite you to share in our joy as we step into forever
+                    </p>
+                </div>
 
                 {/* Date & Location Visual Cluster */}
                 <div className="pt-2 space-y-2 w-full">
@@ -95,14 +116,14 @@ export const Hero = () => {
                 </div>
 
                 {/* Premium Tailored RSVP Button */}
-                <div className="pt-4">
+                {hasRsvp && <div className="pt-4">
                     <button
                         onClick={handleScrollToRsvp}
                         className="bg-army-950 hover:bg-transparent hover:text-army-950 text-white font-sans text-[10px] md:text-xs uppercase tracking-[0.35em] pl-[1.35em] pr-[1em] py-4 border border-army-950 transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] cursor-pointer shadow-sm"
                     >
                         RSVP
                     </button>
-                </div>
+                </div>}
 
                 {/* Stacked Scroll Indicator — Uses mt-12 on mobile to guarantee layout separation */}
                 <div className="mt-12 md:mt-16 flex flex-col items-center space-y-2 text-army-400 text-[9px] font-sans tracking-[0.35em] font-medium">
