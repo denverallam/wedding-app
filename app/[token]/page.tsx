@@ -28,8 +28,8 @@ export default async function Page({
         <div className="bg-[#FAF9F6] text-[#333333] font-serif antialiased">
             <Hero hasRsvp={!!guest} guestName={name} />
             <SaveTheDate />
-            <Entourage />
             <Photos />
+            <Entourage />
             <Details />
             <Attire />
             <RSVPSection {...guest} />
