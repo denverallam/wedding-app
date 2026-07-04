@@ -4,6 +4,7 @@ import { Details } from "../(sections)/Details";
 import { Entourage } from "../(sections)/Entourage";
 import { Hero } from "../(sections)/Hero";
 import { InvitationNotFound } from "../(sections)/NotFound";
+import { Photos } from "../(sections)/Photos";
 import { RSVPSection } from "../(sections)/RSVPSection";
 import { getGuest } from "../utils/sheets";
 
@@ -28,7 +29,7 @@ export default async function Page({
             <Hero hasRsvp={!!guest} guestName={name} />
             <SaveTheDate />
             <Entourage />
-            {/* TODO: slideshow here */}
+            <Photos />
             <Details />
             <Attire />
             <RSVPSection {...guest} />
