@@ -6,7 +6,7 @@ import { PrimaryText, LabelText } from "./Entourage"; // Ensure these imports po
 
 export const GiftGuide = () => {
     return (
-        <section className="relative min-h-[60vh] flex flex-col items-center bg-white justify-center bg-taupe-100 bg-cover bg-center px-6 md:px-12 py-12 overflow-hidden">
+        <section className="uppercase relative min-h-[60vh] flex flex-col items-center bg-white justify-center bg-taupe-100 bg-cover bg-center px-6 md:px-12 py-12 overflow-hidden">
             {/* Elegant Editorial Framed Border */}
             <div className="absolute inset-4 md:inset-8 border border-army-200/60 pointer-events-none z-10" />
 

@@ -122,7 +122,7 @@ export const Hero: React.FC<HeroProps> = ({
                 <div className="flex flex-row justify-center items-center gap-2">
                     {/* I added a class to handle the alignment specifically */}
                     <div className="flex items-center">
-                        <LocationPin className="w-[14px] h-[14px]" />
+                        <LocationPin />
                     </div>
                     <p className="text-sm tracking-[0.2em] uppercase text-white font-sans font-semibold">
                         Ermita de San Jacinto
