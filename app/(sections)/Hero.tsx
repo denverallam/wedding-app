@@ -55,11 +55,13 @@ export const Hero: React.FC<HeroProps> = ({
 
     return (
         <section
-            className="relative min-h-screen flex flex-col items-center justify-center text-center bg-cover bg-center px-12 py-12 overflow-hidden"
+            className="relative min-h-screen flex flex-col items-center justify-center text-center 
+           bg-[url('https://res.cloudinary.com/dvqe9mwrs/image/upload/v1784365673/1000038280_pov4mf.webp')]
+            bg-cover bg-center px-12 py-12 overflow-hidden"
         >
+            <div className="absolute inset-4 md:inset-8 border border-army-200 pointer-events-none z-10" />
+            <div className="absolute inset-0 bg-[#4D6A4A] mix-blend-multiply opacity-90"></div>
             {/* Elegant Editorial Framed Border Inside the Viewport */}
-            <div className="absolute inset-4 md:inset-8 border border-army-200/50 pointer-events-none z-10" />
-
             <motion.div
                 initial="hidden"
                 whileInView="visible"
@@ -69,7 +71,7 @@ export const Hero: React.FC<HeroProps> = ({
             >
                 {/* Invitation Sub-header */}
                 <div className="space-y-2">
-                    <span className="uppercase tracking-[0.4em] text-[10px] md:text-xs text-army-400 font-sans block font-medium">
+                    <span className="uppercase tracking-[0.4em] text-[10px] md:text-xs text-white font-sans block font-medium">
                         The Wedding Celebration of
                     </span>
                 </div>
@@ -77,7 +79,7 @@ export const Hero: React.FC<HeroProps> = ({
                 {/* Main Dynamic Names Container with Pop-up Sequencing */}
                 <motion.h1
                     variants={nameContainerVariant}
-                    className="text-6xl sm:text-6xl lg:text-7xl xl:text-8xl font-light text-army-950 tracking-[0.08em] leading-tight lg:whitespace-nowrap flex flex-col sm:flex-row items-center justify-center"
+                    className="text-6xl sm:text-6xl lg:text-7xl xl:text-8xl font-light text-white tracking-[0.08em] leading-tight lg:whitespace-nowrap flex flex-col sm:flex-row items-center justify-center"
                 >
                     <motion.span variants={nameItemVariant} className={`${greatVibes.className} inline-block`}>
                         Jerome
@@ -99,24 +101,24 @@ export const Hero: React.FC<HeroProps> = ({
                     {guestName && (
                         <motion.span
                             variants={nameItemVariant}
-                            className="bg-army-1000 text-white/80 py-2 font-sans text-sm md:text-base block uppercase tracking-[0.35em] font-semibold mt-4"
+                            className="bg-army-1000 text-white py-2 font-sans text-sm md:text-base block uppercase tracking-[0.35em] font-semibold mt-4"
                         >
                             Dear {guestName}
                         </motion.span>
                     )}
 
                     {/* Minimalist Message Text */}
-                    <p className="text-[10px] text- md:text-xs font-sans font-medium tracking-[0.3em] text-army-400 uppercase leading-relaxed">
+                    <p className="text-[10px] text- md:text-xs font-sans font-medium tracking-[0.3em] text-white uppercase leading-relaxed">
                         We invite you to share in our joy as we step into forever
                     </p>
                 </div>
 
                 {/* Date & Location Visual Cluster */}
                 <div className="pt-2 space-y-2 w-full">
-                    <p className="text-sm tracking-[0.2em] uppercase text-army-800 font-sans font-semibold pt-1">
+                    <p className="text-sm tracking-[0.2em] uppercase text-white font-sans font-semibold pt-1">
                         28 August 2026 | 3:00PM
                     </p>
-                    <p className="text-sm tracking-[0.2em] uppercase text-army-800 font-sans font-semibold pt-1">
+                    <p className="text-sm tracking-[0.2em] uppercase text-white font-sans font-semibold pt-1">
                         Ermita de San Jacinto
                     </p>
                 </div>
@@ -125,16 +127,16 @@ export const Hero: React.FC<HeroProps> = ({
                 {hasRsvp && <div className="pt-4">
                     <button
                         onClick={handleScrollToRsvp}
-                        className="bg-army-950 hover:bg-transparent hover:text-army-950 text-white font-sans text-[10px] md:text-xs uppercase tracking-[0.35em] pl-[1.35em] pr-[1em] py-4 border border-army-950 transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] cursor-pointer shadow-sm"
+                        className="bg-army-1000 hover:bg-transparent hover:text-taupe-950 text-white font-sans text-[10px] md:text-xs uppercase tracking-[0.35em] pl-[1.35em] pr-[1em] py-4 border border-army-950 transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] cursor-pointer shadow-sm"
                     >
                         RSVP
                     </button>
                 </div>}
 
                 {/* Stacked Scroll Indicator — Uses mt-12 on mobile to guarantee layout separation */}
-                <div className="mt-12 md:mt-16 flex flex-col items-center space-y-2 text-army-400 text-[9px] font-sans tracking-[0.35em] font-medium">
+                <div className="mt-12 md:mt-16 flex flex-col items-center space-y-2 text-white text-[9px] font-sans tracking-[0.35em] font-medium">
                     <span className="opacity-80">SCROLL TO OUR STORY</span>
-                    <div className="w-[1px] h-8 bg-gradient-to-b from-army-400 to-transparent animate-pulse" />
+                    <div className="w-[1px] h-8 bg-gradient-to-b from-white to-transparent animate-pulse" />
                 </div>
             </motion.div>
         </section>

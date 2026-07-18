@@ -81,17 +81,19 @@ export const Entourage = () => {
                     <PrimaryText>Principal Sponsors</PrimaryText>
                     <LabelText>To stand as witness as we exchange our vows</LabelText>
                     <TwoColumnContainer>
+                        <NameText orientation="right">Mr. Celestino dela Cruz</NameText><NameText orientation="left">Mrs. Lourdes dela Cruz</NameText>
+                        <NameText orientation="right">Mr. Ariel Patdu</NameText><NameText orientation="left">Mrs. Sheila Patdu</NameText>
+                        <NameText orientation="right">Mr. Marion Lloyd Nacionales</NameText><NameText orientation="left">Mrs. Janette Fermin</NameText>
                         <NameText orientation="right">Mr. Jober Malsi</NameText><NameText orientation="left">Mrs. Leah Malsi</NameText>
                         <NameText orientation="right">Mr. Marson Allam</NameText><NameText orientation="left">Mrs. Lani Allam</NameText>
                         <NameText orientation="right">Mr. Manuel Allam</NameText><NameText orientation="left">Mrs. Cecille Bagunu</NameText>
                         <NameText orientation="right">Mr. Errol Flynn Malsi</NameText><NameText orientation="left">Ms. Rosalyn Deray</NameText>
-                        <NameText orientation="right">Mr. Ariel Patdu</NameText><NameText orientation="left">Mrs. Sheila Patdu</NameText>
-                        <NameText orientation="right">Mr. Celestino dela Cruz</NameText><NameText orientation="left">Mrs. Lourdes dela Cruz</NameText>
                         <NameText orientation="right">Mr. Edgar Mamauag</NameText><NameText orientation="left">Mrs. Maricel Mamauag</NameText>
                         <NameText orientation="right">Mr. Rexandro Silverio</NameText><NameText orientation="left">Mrs. Jaycee Silverio</NameText>
                         <NameText orientation="right">Mr. Josel dela Cruz</NameText><NameText orientation="left">Mrs. Janette dela Cruz</NameText>
-                        <NameText orientation="right">Mr. Marion Lloyd Nacionales</NameText><NameText orientation="left">Mrs. Janette Fermin</NameText>
                         <NameText orientation="right">Mr. Rizalino Gatan</NameText><NameText orientation="left">Mrs. Olivia Ramos</NameText>
+                        <NameText orientation="right">Mr. Eduardo Villaverde</NameText><NameText orientation="left">Mrs. Nelie Villaverde</NameText>
+                        <NameText orientation="right">Mr. Celestino Bagauisan Jr.</NameText><NameText orientation="left">Mrs. Kathleen Bagauisan</NameText>
                         <NameText orientation="right">Mr. Joel Jose Josue</NameText><NameText orientation="left">Mrs. Connie Josue</NameText>
                     </TwoColumnContainer>
                 </div>
@@ -146,13 +148,13 @@ export const Entourage = () => {
                         <strong className="font-sans text-army-900 block text-[11px] md:text-xs uppercase tracking-[0.15em] font-extrabold text-left w-full">Bridesmaids</strong>
                     </TwoColumnContainer>
                     <TwoColumnContainer>
-                                             <NameText orientation="right">Mr. Cenon Ibay Jr.</NameText>
+                        <NameText orientation="right">Mr. Cenon Ibay Jr.</NameText>
                         <NameText orientation="left">Ms. Carla Eloiza Bagunu</NameText>
                         <NameText orientation="right">Mr. Niko Angelo Tabangin</NameText>
                         <NameText orientation="left">Ms. Marijoyce Zipagan</NameText>
                         <NameText orientation="right">Mr. Hardy Batalla</NameText>
                         <NameText orientation="left">Ms. Joanna Rose Sapnu</NameText>
-                        <NameText orientation="right">Mr. Dax Paulo Binag</NameText>
+                        <NameText orientation="right">Mr. Dax Paolo Binag</NameText>
                         <NameText orientation="left">Ms. Pebie Angelica Binag</NameText>
                         <NameText orientation="right">Mr. Marc Edgar Mamauag</NameText>
                         <NameText orientation="left">Ms. Ma Angelica Ignes</NameText>
@@ -208,7 +210,7 @@ export const Entourage = () => {
                         <LabelText>To shower our aisle with flowers</LabelText>
                     </div>
                     <TwoColumnContainer>
-                         <NameText orientation="right">Nathalie Mabbayad</NameText>
+                        <NameText orientation="right">Nathalie Mabbayad</NameText>
                         <NameText orientation="left">Janelle Ashley Dalupang</NameText>
                         <NameText orientation="right">Ava Chelsea Ancheta</NameText>
                         <NameText orientation="left">Pamela Bianca Andres</NameText>
@@ -216,6 +218,7 @@ export const Entourage = () => {
                         <NameText orientation="left">Holyanna Acosta</NameText>
                         <NameText orientation="right">Coleen Ann Alcantara</NameText>
                         <NameText orientation="left">Raquel Antoinette Dalupang</NameText>
+                        <NameText orientation="right">Arabella dela Cruz</NameText>
                     </TwoColumnContainer>
                 </div>
             </motion.div>

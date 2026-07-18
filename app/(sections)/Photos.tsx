@@ -21,20 +21,20 @@ type GalleryPhoto = Photo & {
 };
 
 const originals = [
-  { id: "photo1_rtwnb5", version: "v1781449357" },
-  { id: "photo2_rysihp", version: "v1783181397" },
+  // { id: "photo1_rtwnb5", version: "v1781449357" },
+  // { id: "photo2_rysihp", version: "v1783181397" },
   { id: "photo3_tcwm8w", version: "v1783181629" },
-  { id: "photo4_hdyumg", version: "v1783181697" },
+  // { id: "photo4_hdyumg", version: "v1783181697" },
   { id: "photo5_wofds0", version: "v1783181690" },
-  { id: "photo6_zzxsxw", version: "v1781449753" },
-  { id: "photo7_crya75", version: "v1783182879" },
-  { id: "photo8_i7k7o8", version: "v1783183017" },
+  // { id: "photo6_zzxsxw", version: "v1781449753" },
+  // { id: "photo7_crya75", version: "v1783182879" },
+  // { id: "photo8_i7k7o8", version: "v1783183017" },
   { id: "photo9_qnrghz", version: "v1783183115" },
   { id: "photo10_qjujm5", version: "v1783183508" },
-  { id: "photo11_jqn5g0", version: "v1783183655" },
+  // { id: "photo11_jqn5g0", version: "v1783183655" },
   { id: "photo12_ejysc1", version: "v1783183776" },
   { id: "photo13_qnc8us", version: "v1783183912" },
-  { id: "photo14_tgitpk", version: "v1783183978" },
+  // { id: "photo14_tgitpk", version: "v1783183978" },
   { id: "photo15_mbkqcs", version: "v1783183981" },
   { id: "photo16_dlkd2q", version: "v1783183980" },
 ];

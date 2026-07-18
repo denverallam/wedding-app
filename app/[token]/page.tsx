@@ -5,7 +5,9 @@ import { Entourage } from "../(sections)/Entourage";
 import { Hero } from "../(sections)/Hero";
 import { InvitationNotFound } from "../(sections)/NotFound";
 import { Photos } from "../(sections)/Photos";
+import { GiftGuide } from "../(sections)/GiftGuide";
 import { RSVPSection } from "../(sections)/RSVPSection";
+import { MusicPlayer } from "../(sections)/MusicPlayer";
 import { getGuest } from "../utils/sheets";
 
 export default async function Page({
@@ -26,12 +28,14 @@ export default async function Page({
 
     return (
         <div className="bg-[#FAF9F6] text-[#333333] font-serif antialiased">
+            <MusicPlayer />
             <Hero hasRsvp={!!guest} guestName={name} />
             <SaveTheDate />
             <Photos />
             <Entourage />
             <Details />
             <Attire />
+            <GiftGuide />
             <RSVPSection {...guest} />
             <footer className="py-6 px-4 bg-army-1000 text-white/80 text-center font-sans text-[10px] md:text-xs tracking-[0.25em]">
                 Thank you for being part of our story. <span className="font-bold">#JEROMEboundtofoRIVA</span>

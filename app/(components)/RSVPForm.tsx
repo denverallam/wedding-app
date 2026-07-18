@@ -50,38 +50,38 @@ export const RSVPForm: React.FC<RSVPFormProps> = ({
         <section className="relative min-h-screen flex flex-col items-center justify-start bg-[url('https://res.cloudinary.com/dvqe9mwrs/image/upload/f_auto,q_auto,w_1920/v1781449753/photo6_zzxsxw.webp')] bg-cover bg-center px-12 py-12 overflow-hidden" id="rsvp">
             <div className="absolute inset-4 md:inset-8 border border-army-200/50 pointer-events-none z-10" />
 
-            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeInVariant} className="text-army-800 space-y-10 md:space-y-12 max-w-md w-full relative z-20 flex flex-col items-center">
-
+            <motion.div 
+                initial="hidden" 
+                whileInView="visible" 
+                viewport={{ once: true, margin: "-100px" }} 
+                variants={fadeInVariant} 
+                className="text-army-800 space-y-10 md:space-y-12 max-w-md w-full relative z-20 flex flex-col items-center"
+            >
+                {/* Header Section */}
                 <div className="space-y-4 text-center">
                     <h2 className="text-3xl sm:text-4xl font-light tracking-[0.12em] text-army-950 uppercase leading-tight">
-                        Kindly{" "}
-                        <span className="text-army-900 font-serif italic lowercase tracking-normal mx-1">
-                            reply
-                        </span>
+                     We hope you can join us
                     </h2>
 
                     {guestName && (
-                        <>
-                            <span className="font-sans text-sm text-army-700 block uppercase tracking-[0.35em] font-semibold">
-                                To {guestName},
+                        <div className="space-y-4">
+                            <span className="font-sans text-[10px] text-army-600 block uppercase tracking-[0.35em] font-bold">
+                                Reserved for
                             </span>
-
-                            <p className="font-sans text-[10px] md:text-[11px] text-army-500 leading-relaxed max-w-sm mx-auto">
-                                This invitation is extended exclusively to{" "}
-                                <span className="font-medium text-army-700">
-                                    {guestName}
-                                </span>
-                                {guestCount > 1 && (
-                                    <>
-                                        {" "}and their party of {guestCount}
-                                    </>
-                                )}
-                                . We kindly ask that no additional guests be brought.
+                            <p className="font-sans text-xl text-army-900 uppercase tracking-[0.05em] font-medium italic">
+                                {guestName}
                             </p>
-                        </>
+
+                            <p className="font-sans text-[10px] md:text-[11px] text-army-1000 leading-relaxed max-w-sm mx-auto">
+                                We have reserved {guestCount > 1 ? `${guestCount} seats` : "one seat"} in your honor. 
+                                We kindly ask that no additional guests be brought, as we are 
+                                unable to accommodate those not listed in your invitation.
+                            </p>
+                        </div>
                     )}
                 </div>
 
+                {/* Form Container */}
                 <div className="space-y-8 font-sans text-left bg-army-1000 backdrop-blur-[2px] p-6 md:p-8 border border-white/20 rounded-sm shadow-xs w-full">
                     <AnimatePresence mode="wait">
                         {submitted && !isEditing ? (
@@ -94,7 +94,7 @@ export const RSVPForm: React.FC<RSVPFormProps> = ({
                                         {status ? "Thank you for sharing in our joy." : "Thank you for your kind wishes."}
                                     </p>
                                 </div>
-                                <button onClick={() => setIsEditing(true)} className="w-full sm:w-auto px-8 py-3 border border-army-300 bg-white/80 hover:bg-army-1000 hover:text-white/80 hover:text-white/80 transition-all duration-300 text-[9px] uppercase tracking-[0.2em] font-medium">
+                                <button onClick={() => setIsEditing(true)} className="w-full sm:w-auto px-8 py-3 border border-army-300 bg-white/80 hover:bg-army-1000 hover:text-white transition-all duration-300 text-[9px] uppercase tracking-[0.2em] font-medium">
                                     Edit your response
                                 </button>
                             </motion.div>
@@ -108,22 +108,24 @@ export const RSVPForm: React.FC<RSVPFormProps> = ({
                                     <div className="py-2 border-b border-army-200/60 text-xs uppercase tracking-[0.15em] text-white/80">
                                         {guestCount} {guestCount === 1 ? 'Seat' : 'Seats'}
                                     </div>
-
-                                    <p className="text-[9px] md:text-[10px] text-white/80 tracking-[0.12em] uppercase leading-relaxed pt-1">
-                                        Kindly note that attendance is limited to the number of seats reserved in your invitation. We regret that we are unable to accommodate additional guests.
-                                    </p>
                                 </div>
 
                                 <div className="space-y-2">
                                     <label className="block text-[12px] uppercase tracking-[0.25em] font-semibold text-white/80">Note <span className="font-normal">(Optional)</span></label>
-                                    <textarea value={note} onChange={(e) => setNote(e.target.value)} className="w-full bg-transparent border-b border-army-200/60 text-xs py-2 focus:outline-none placeholder:text-white/80 text-white/80" placeholder="A note for the couple..." rows={2} />
+                                    <textarea 
+                                        value={note} 
+                                        onChange={(e) => setNote(e.target.value)} 
+                                        className="w-full bg-transparent border-b border-army-200/60 text-xs py-2 focus:outline-none placeholder:text-white/80 text-white/80" 
+                                        placeholder="A note for the couple..." 
+                                        rows={2} 
+                                    />
                                 </div>
 
                                 <div className="flex flex-col gap-4">
-                                    <button disabled={isPending} onClick={() => handleSelection(true)} className="w-full sm:w-auto px-8 py-3 border border-army-300 bg-white/80 hover:bg-army-1000 hover:text-white/80 hover:text-white/80 transition-all duration-300 text-[9px] uppercase tracking-[0.2em] font-bold">
+                                    <button disabled={isPending} onClick={() => handleSelection(true)} className="w-full sm:w-auto px-8 py-3 border border-army-300 bg-white/80 hover:bg-army-1000 hover:text-white transition-all duration-300 text-[9px] uppercase tracking-[0.2em] font-bold">
                                         {isPending ? "Updating..." : "Joyfully Accept"}
                                     </button>
-                                    <button disabled={isPending} onClick={() => handleSelection(false)} className="w-full sm:w-auto px-8 py-3 border border-army-300 bg-white/80 hover:bg-army-1000 hover:text-white/80 hover:text-white/80 transition-all duration-300 text-[9px] uppercase tracking-[0.2em] font-bold">
+                                    <button disabled={isPending} onClick={() => handleSelection(false)} className="w-full sm:w-auto px-8 py-3 border border-army-300 bg-white/80 hover:bg-army-1000 hover:text-white transition-all duration-300 text-[9px] uppercase tracking-[0.2em] font-bold">
                                         {isPending ? "Updating..." : "Regretfully Decline"}
                                     </button>
                                 </div>
