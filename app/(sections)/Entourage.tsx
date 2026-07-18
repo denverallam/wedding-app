@@ -170,7 +170,7 @@ export const Entourage = () => {
                         <NameText orientation="left">Josephine Lu Ronquillo</NameText>
 
                         <NameText orientation="right">Roseven Tumaliuan</NameText>
-                        <NameText orientation="left">Raquel Antoinette Dalupang</NameText>
+                        <NameText orientation="left">Raquel Dalupang</NameText>
 
                         <NameText orientation="right">Paul John Beldad</NameText>
                         <NameText orientation="left">Arbie Christine Beldad</NameText>

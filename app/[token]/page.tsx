@@ -29,6 +29,7 @@ export default async function Page({
     return (
         <div className="bg-[#FAF9F6] text-[#333333] font-serif antialiased">
             <MusicPlayer />
+
             <Hero hasRsvp={!!guest} guestName={name} />
             <SaveTheDate />
             <Photos />

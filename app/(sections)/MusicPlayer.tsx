@@ -19,12 +19,23 @@ export const MusicPlayer = () => {
     };
 
     return (
-        <div className="fixed bottom-4 right-4 z-50">
+        // The "sticky" behavior is driven by fixed + bottom/right positioning
+        <div className="fixed bottom-6 right-6 z-[100] flex items-center gap-4 bg-black/30 backdrop-blur-md px-4 py-3 rounded-full border border-white/20 shadow-xl pointer-events-auto">
+            {/* Song Info */}
+            <div className="flex flex-col">
+                <span className="text-[10px] uppercase tracking-[0.2em] text-white/90 font-bold">I Do</span>
+                <span className="text-[8px] uppercase tracking-[0.15em] text-white/60">Marie Digby</span>
+            </div>
+
+            {/* Play/Pause Button */}
             <button 
                 onClick={togglePlay}
-                className="bg-white/20 backdrop-blur-md p-2 rounded-full border border-white/30 text-white text-xs uppercase tracking-widest"
+                className="w-8 h-8 flex items-center justify-center rounded-full border border-white/30 hover:bg-white/10 transition-all duration-300 active:scale-95"
+                aria-label={isPlaying ? "Pause music" : "Play music"}
             >
-                {isPlaying ? "Pause Music" : "Play Music"}
+                <div className="text-[10px] uppercase font-bold text-white leading-none">
+                    {isPlaying ? "❚❚" : "▶"}
+                </div>
             </button>
             
             <audio ref={audioRef} loop playsInline>
