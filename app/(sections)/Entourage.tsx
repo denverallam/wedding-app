@@ -169,7 +169,7 @@ export const Entourage = () => {
                         <NameText orientation="right">Denver Allam</NameText>
                         <NameText orientation="left">Josephine Lu Ronquillo</NameText>
 
-                        <NameText orientation="right">Roseven Tumaliuan</NameText>
+                        <NameText orientation="right">Rosven Tumaliuan</NameText>
                         <NameText orientation="left">Raquel Dalupang</NameText>
 
                         <NameText orientation="right">Paul John Beldad</NameText>
@@ -183,9 +183,6 @@ export const Entourage = () => {
 
                         <NameText orientation="right">Ramon Jose Bagunu</NameText>
                         <NameText orientation="left">Angelu Bagunu</NameText>
-                        
-                        <NameText orientation="right">Roseven Tumaliuan</NameText>
-                        <NameText orientation="left">Josephine Lu Ronquillo</NameText>
                     </TwoColumnContainer>
                 </div>
 
