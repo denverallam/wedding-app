@@ -23,9 +23,9 @@ export const GiftGuide = () => {
                         Gift Guide
                     </strong>
                     <p className="font-sans text-sm md:text-[15px] text-army-800 leading-relaxed italic">
-                        "Your presence is the best gift! But if you'd still like to show us some love, 
+                        Your presence is the best gift! But if you'd still like to show us some love, 
                         <strong> CASH</strong> is highly preferred—mainly because our Manila apartment has a strict 
-                        'no more blenders' policy."
+                        'no more blenders' policy.
                     </p>
                 </div>
 
@@ -42,7 +42,7 @@ export const GiftGuide = () => {
                         during the ceremony. This allows our church ceremony to be as peaceful 
                         and solemn as possible. 
                     </p>
-                    <LabelText>Thank you for your understanding and support.</LabelText>
+                   <p className="font-sans text-sm md:text-[15px] text-army-800 leading-relaxed italic">Thank you for your understanding and support.  </p>
                 </div>
             </motion.div>
         </section>
