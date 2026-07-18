@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { fadeInVariant } from "../page";
+import { LocationPin } from "../(components)/LocationPin";
 
 
 interface HeroProps {
@@ -101,7 +102,7 @@ export const Hero: React.FC<HeroProps> = ({
                     {guestName && (
                         <motion.span
                             variants={nameItemVariant}
-                            className="bg-army-1000 text-white py-2 font-sans text-sm md:text-base block uppercase tracking-[0.35em] font-semibold mt-4"
+                            className="bg-[#2F402E] text-white py-2 font-sans text-sm md:text-base block uppercase tracking-[0.35em] font-semibold mt-4"
                         >
                             Dear {guestName}
                         </motion.span>
@@ -118,16 +119,22 @@ export const Hero: React.FC<HeroProps> = ({
                     <p className="text-sm tracking-[0.2em] uppercase text-white font-sans font-semibold pt-1">
                         28 August 2026 | 3:00PM
                     </p>
-                    <p className="text-sm tracking-[0.2em] uppercase text-white font-sans font-semibold pt-1">
+                <div className="flex flex-row justify-center items-center gap-2">
+                    {/* I added a class to handle the alignment specifically */}
+                    <div className="flex items-center">
+                        <LocationPin className="w-[14px] h-[14px]" />
+                    </div>
+                    <p className="text-sm tracking-[0.2em] uppercase text-white font-sans font-semibold">
                         Ermita de San Jacinto
                     </p>
+                </div>
                 </div>
 
                 {/* Premium Tailored RSVP Button */}
                 {hasRsvp && <div className="pt-4">
                     <button
                         onClick={handleScrollToRsvp}
-                        className="bg-army-1000 hover:bg-transparent hover:text-taupe-950 text-white font-sans text-[10px] md:text-xs uppercase tracking-[0.35em] pl-[1.35em] pr-[1em] py-4 border border-army-950 transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] cursor-pointer shadow-sm"
+                        className="bg-[#2F402E] text-white font-sans text-[10px] md:text-xs uppercase tracking-[0.35em] pl-[1.35em] pr-[1em] py-4 border border-army-950 transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] cursor-pointer shadow-sm"
                     >
                         RSVP
                     </button>

@@ -19,7 +19,7 @@ export const GiftGuide = () => {
             >
                 {/* Gift Section */}
                 <div className="space-y-4">
-                    <strong className="font-sans text-army-950 block text-[11px] md:text-xs uppercase tracking-[0.25em] font-extrabold text-center w-full">
+                    <strong className="font-sans text-army-950 block text-3xl uppercase tracking-[0.25em] font-extrabold text-center w-full">
                         Gift Guide
                     </strong>
                     <p className="font-sans text-sm md:text-[15px] text-army-800 leading-relaxed italic">
@@ -34,7 +34,7 @@ export const GiftGuide = () => {
 
                 {/* Reminder Section */}
                 <div className="space-y-3">
-                    <strong className="font-sans text-army-950 block text-[11px] md:text-xs uppercase tracking-[0.25em] font-extrabold text-center w-full">
+                    <strong className="font-sans text-army-950 block text-3xl uppercase tracking-[0.25em] font-extrabold text-center w-full">
                         A Gentle Reminder
                     </strong>
                     <p className="font-sans text-sm md:text-[15px] text-army-800 leading-relaxed italic">

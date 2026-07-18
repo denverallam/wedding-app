@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { fadeInVariant } from "../page";
+import { Great_Vibes } from "next/font/google";
 
 interface RSVPFormProps {
     token: string;
@@ -11,6 +12,12 @@ interface RSVPFormProps {
     initialStatus?: boolean;
     initialNote?: string;
 }
+
+const greatVibes = Great_Vibes({
+    weight: "400",
+    subsets: ["latin"],
+});
+
 
 export const RSVPForm: React.FC<RSVPFormProps> = ({
     token,
@@ -59,7 +66,7 @@ export const RSVPForm: React.FC<RSVPFormProps> = ({
             >
                 {/* Header Section */}
                 <div className="space-y-4 text-center">
-                    <h2 className="text-3xl sm:text-4xl font-light tracking-[0.12em] text-army-950 uppercase leading-tight">
+                    <h2 className="text-3xl sm:text-3xl font-light tracking-[0.12em] text-army-950 uppercase leading-tight">
                      We hope you can join us
                     </h2>
 
@@ -68,10 +75,9 @@ export const RSVPForm: React.FC<RSVPFormProps> = ({
                             <span className="font-sans text-[10px] text-army-600 block uppercase tracking-[0.35em] font-bold">
                                 Reserved for
                             </span>
-                            <p className="font-sans text-xl text-army-900 uppercase tracking-[0.05em] font-medium italic">
+                            <p className={`${greatVibes.className} text-3xl text-army-900 tracking-[0.05em] font-bold`}>
                                 {guestName}
                             </p>
-
                             <p className="font-sans text-[10px] md:text-[11px] text-army-1000 leading-relaxed max-w-sm mx-auto">
                                 We have reserved {guestCount > 1 ? `${guestCount} seats` : "one seat"} in your honor. 
                                 We kindly ask that no additional guests be brought, as we are 
