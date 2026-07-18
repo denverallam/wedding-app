@@ -19,7 +19,6 @@ const greatVibes = Great_Vibes({
 type GalleryPhoto = Photo & {
   original: string;
 };
-
 const originals = [
   // { id: "photo1_rtwnb5", version: "v1781449357" },
   // { id: "photo2_rysihp", version: "v1783181397" },
@@ -28,10 +27,14 @@ const originals = [
   { id: "photo5_wofds0", version: "v1783181690" },
   // { id: "photo6_zzxsxw", version: "v1781449753" },
   // { id: "photo7_crya75", version: "v1783182879" },
-  // { id: "photo8_i7k7o8", version: "v1783183017" },
+  { id: "1000038287_zerxct", version: "v1784369996" },
+  { id: "DSC00037_jfunrd", version: "v1784369792" },
+  // { id: "photo7_crya75", version: "v1783182879" },
   { id: "photo9_qnrghz", version: "v1783183115" },
   { id: "photo10_qjujm5", version: "v1783183508" },
   // { id: "photo11_jqn5g0", version: "v1783183655" },
+  { id: "Screenshot_20260718_171740_Instagram_y4oqtq", version: "v1784369391" },
+
   { id: "photo12_ejysc1", version: "v1783183776" },
   { id: "photo13_qnc8us", version: "v1783183912" },
   // { id: "photo14_tgitpk", version: "v1783183978" },
@@ -45,9 +48,10 @@ const aspectRatios = [
   { width: 3, height: 4, crop: "ar_3:4" },
   { width: 2, height: 3, crop: "ar_2:3" },
   { width: 9, height: 16, crop: "ar_9:16" },
+  { width: 16, height: 9, crop: "ar_16:9" },
 ];
 
-const pattern = [0, 3, 1, 4, 2, 1, 3, 0, 4, 2, 0, 1, 4, 3, 2, 0];
+const pattern = [0, 3, 1, 5, 2, 1, 3, 0, 4, 2, 0, 1, 4, 3, 2, 0];
 
 const photos: GalleryPhoto[] = originals.map((image, index) => {
   const ratio = aspectRatios[pattern[index]];
