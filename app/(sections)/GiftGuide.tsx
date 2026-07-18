@@ -24,7 +24,7 @@ export const GiftGuide = () => {
                     </strong>
                     <p className="font-sans text-sm md:text-[15px] text-army-800 leading-relaxed italic">
                         Your presence is the best gift! But if you'd still like to show us some love, 
-                        <strong> CASH</strong> is highly preferred—mainly because our Manila apartment has a strict 
+                        <strong> CASH is highly preferred</strong> - mainly because our Manila apartment has a strict 
                         'no more blenders' policy.
                     </p>
                 </div>
@@ -38,12 +38,12 @@ export const GiftGuide = () => {
                         A Gentle Reminder
                     </strong>
                     <p className="font-sans text-sm md:text-[15px] text-army-800 leading-relaxed italic">
-                        With love and appreciation, we kindly encourage guests not to bring kids 
+                        With love and appreciation, we kindly encourage guests <strong>not to bring kids </strong> 
                         during the ceremony. This allows our church ceremony to be as peaceful 
                         and solemn as possible. 
                     </p>
-                   <p className="font-sans text-sm md:text-[15px] text-army-800 leading-relaxed italic">Thank you for your understanding and support.  </p>
                 </div>
+                <p className="mt-1 font-sans text-sm md:text-[15px] text-army-800 leading-relaxed italic">Thank you for your understanding and support.  </p>
             </motion.div>
         </section>
     );

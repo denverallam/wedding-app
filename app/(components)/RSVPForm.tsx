@@ -73,21 +73,14 @@ export const RSVPForm: React.FC<RSVPFormProps> = ({
                     </h2>
 
                     {guestName && (
-                        <div className="space-y-4">
-                            <p className={`${greatVibes.className} text-3xl tracking-[0.05em] font-bold`}>
-                                {guestName}
-                            </p>
-                            <p className="font-sans text-[10px] md:text-[11px] text-white/80 leading-relaxed max-w-sm mx-auto">
-                                We have reserved {guestCount > 1 ? `${guestCount} seats` : "one seat"} in your honor. 
-                                We kindly ask that no additional guests be brought, as we are 
-                                unable to accommodate those not listed in your invitation.
-                            </p>
-                        </div>
+                        <p className={`${greatVibes.className} text-3xl tracking-[0.05em] font-bold`}>
+                            {guestName}
+                        </p>
                     )}
                 </div>
 
-                {/* Form Container - Now Transparent with Blur */}
-                <div className="space-y-8 font-sans text-left bg-army-900/40 backdrop-blur-md p-6 md:p-8 border border-white/20 rounded-sm shadow-2xl w-full">
+                {/* Form Container - Solid Background */}
+                <div className="space-y-8 font-sans text-left bg-army-900 p-6 md:p-8 border border-white/20 rounded-sm shadow-2xl w-full">
                     <AnimatePresence mode="wait">
                         {submitted && !isEditing ? (
                             <motion.div key="confirmed" initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-center py-6 space-y-6">
@@ -137,6 +130,15 @@ export const RSVPForm: React.FC<RSVPFormProps> = ({
                         )}
                     </AnimatePresence>
                 </div>
+
+                {/* Paragraph Section */}
+                {guestName && (
+                    <p className="font-sans text-sm text-white/80 leading-relaxed max-w-sm mx-auto text-center">
+                        We have reserved {guestCount > 1 ? `${guestCount} seats` : "one seat"} in your honor. 
+                        We kindly ask that no additional guests be brought, as we are 
+                        unable to accommodate those not listed in your invitation.
+                    </p>
+                )}
             </motion.div>
         </section>
     );

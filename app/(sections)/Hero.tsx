@@ -134,7 +134,7 @@ export const Hero: React.FC<HeroProps> = ({
                 {hasRsvp && <div className="pt-4">
                     <button
                         onClick={handleScrollToRsvp}
-                        className="bg-[#2F402E] text-white font-sans text-[10px] md:text-xs uppercase tracking-[0.35em] pl-[1.35em] pr-[1em] py-4 border border-army-950 transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] cursor-pointer shadow-sm"
+                        className="bg-[#2F402E] text-white p-2 font-sans text-sm md:text-base block uppercase tracking-[0.35em] font-semibold mt-4"
                     >
                         RSVP
                     </button>
